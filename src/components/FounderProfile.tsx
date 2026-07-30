@@ -1,6 +1,7 @@
 import React from 'react';
 import { FIRM_INFO, TRAJECTORY_MILESTONES } from '../data/firmData';
 import { Award, GraduationCap, ShieldCheck, Heart, Quote } from 'lucide-react';
+import logoSealImg from '../assets/images/official_logo_seal_1785381560321.jpg';
 
 export const FounderProfile: React.FC = () => {
   return (
@@ -8,7 +9,7 @@ export const FounderProfile: React.FC = () => {
       {/* Decorative subtle background watermark seal */}
       <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[450px] h-[450px] opacity-[0.035] pointer-events-none select-none">
         <img
-          src="/src/assets/images/official_logo_seal_1785381560321.jpg"
+          src={logoSealImg}
           alt=""
           className="w-full h-full object-contain rounded-full border border-[#C89A3B]/30"
           referrerPolicy="no-referrer"

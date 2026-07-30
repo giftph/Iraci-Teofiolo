@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { ShieldCheck, Scale } from 'lucide-react';
 import { FIRM_INFO } from '../data/firmData';
+import logoSealImg from '../assets/images/official_logo_seal_1785381560321.jpg';
 
 interface LoadingOverlayProps {
   isLoading: boolean;
@@ -45,7 +46,7 @@ export const LoadingOverlay: React.FC<LoadingOverlayProps> = ({ isLoading }) => 
           {/* Seal Image Inner Circle */}
           <div className="w-24 h-24 rounded-full border-2 border-[#E5C158] bg-[#4A1810] shadow-2xl overflow-hidden p-1 flex items-center justify-center relative z-10">
             <img
-              src="/src/assets/images/official_logo_seal_1785381560321.jpg"
+              src={logoSealImg}
               alt="Selo de Autenticidade Institucional Dra. Iraci Teófilo Rosa"
               className="w-full h-full object-cover rounded-full"
               referrerPolicy="no-referrer"

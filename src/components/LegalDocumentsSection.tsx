@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import logoSealImg from '../assets/images/official_logo_seal_1785381560321.jpg';
 import { 
   FileText, 
   CheckSquare, 
@@ -243,7 +244,7 @@ export const LegalDocumentsSection: React.FC<LegalDocumentsSectionProps> = ({
       {/* Background seal watermark accent */}
       <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-96 h-96 opacity-5 pointer-events-none">
         <img
-          src="/src/assets/images/official_logo_seal_1785381560321.jpg"
+          src={logoSealImg}
           alt=""
           className="w-full h-full object-contain rounded-full"
           referrerPolicy="no-referrer"

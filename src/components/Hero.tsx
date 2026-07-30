@@ -2,6 +2,8 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { Calendar, ShieldCheck, Award, ChevronRight, MessageCircle, Scale, CheckCircle2 } from 'lucide-react';
 import { FIRM_INFO } from '../data/firmData';
+import logoSealImg from '../assets/images/official_logo_seal_1785381560321.jpg';
+import inicioImg from '../assets/images/inicio.png';
 
 interface HeroProps {
   onOpenSchedule: () => void;
@@ -13,7 +15,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenSchedule }) => {
       {/* Official Law Firm Logo Watermark Background */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0 overflow-hidden select-none">
         <img
-          src="/src/assets/images/official_logo_seal_1785381560321.jpg"
+          src={logoSealImg}
           alt=""
           className="w-[85%] max-w-5xl aspect-square object-contain opacity-[0.045] blur-[1px] mix-blend-soft-light rounded-full transform scale-105"
           referrerPolicy="no-referrer"
@@ -129,7 +131,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenSchedule }) => {
                 
                 <div className="relative rounded-xl overflow-hidden bg-[#32100A]">
                   <img
-                    src="/src/assets/images/inicio.png"
+                    src={inicioImg}
                     alt="Dra. Iraci Teófilo Rosa - Sociedade Individual de Advocacia"
                     className="w-full h-auto object-cover rounded-xl transition-transform duration-700 group-hover:scale-102"
                     referrerPolicy="no-referrer"

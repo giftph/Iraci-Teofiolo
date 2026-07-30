@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Calendar, Menu, X, MessageCircle } from 'lucide-react';
 import { FIRM_INFO } from '../data/firmData';
+import logoSealImg from '../assets/images/official_logo_seal_1785381560321.jpg';
 
 interface NavbarProps {
   onOpenSchedule: () => void;
@@ -51,7 +52,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSchedule }) => {
           <a href="#hero" className="flex items-center gap-3 group shrink-0">
             <div className="w-10 h-10 rounded-full border-2 border-[#C89A3B] flex items-center justify-center bg-[#4A1810] shadow-md group-hover:border-[#E5C158] transition-colors overflow-hidden shrink-0">
               <img
-                src="/src/assets/images/official_logo_seal_1785381560321.jpg"
+                src={logoSealImg}
                 alt="Logo Iraci Teófilo Sociedade Individual de Advocacia"
                 className="w-full h-full object-cover object-center"
                 referrerPolicy="no-referrer"

@@ -118,13 +118,13 @@ useEffect(() => {
         <meta property="og:site_name" content="Iraci Teófilo Advocacia" />
         <meta property="og:title" content="Dra. Iraci Teófilo Rosa | Advocacia & Consultoria Jurídica em Goiânia" />
         <meta property="og:description" content="Mais de 30 anos de liderança e ética na advocacia em Goiás. Atendimento personalizado no Orion Business & Health Complex em Goiânia e videoconferência nacional." />
-        <meta property="og:image" content="/src/assets/images/official_logo_seal_1785381560321.jpg" />
+        <meta property="og:image" content="/assets/images/official_logo_seal_1785381560321.jpg" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Dra. Iraci Teófilo Rosa | Advocacia & Consultoria Jurídica" />
         <meta name="twitter:description" content="Atuação ética, humanizada e estratégica com Ouvidoria-Geral OAB/GO e Conselheira Seccional." />
-        <meta name="twitter:image" content="/src/assets/images/official_logo_seal_1785381560321.jpg" />
+        <meta name="twitter:image" content="/assets/images/official_logo_seal_1785381560321.jpg" />
       </Helmet>
 
       {/* Branded Loading Overlay */}

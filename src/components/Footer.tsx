@@ -1,6 +1,7 @@
 import React from 'react';
 import { FIRM_INFO } from '../data/firmData';
 import { MapPin, Phone, Mail, Clock, ShieldCheck, Scale, ArrowUp } from 'lucide-react';
+import logoSealImg from '../assets/images/official_logo_seal_1785381560321.jpg';
 
 export const Footer: React.FC = () => {
   const scrollToTop = () => {
@@ -19,7 +20,7 @@ export const Footer: React.FC = () => {
             <div className="flex items-center space-x-3">
               <div className="w-12 h-12 rounded-full border-2 border-[#C89A3B] flex items-center justify-center bg-[#4A1810] overflow-hidden shrink-0 shadow-lg">
                 <img
-                  src="/src/assets/images/official_logo_seal_1785381560321.jpg"
+                  src={logoSealImg}
                   alt="Logo Iraci Teófilo"
                   className="w-full h-full object-cover object-center"
                   referrerPolicy="no-referrer"
