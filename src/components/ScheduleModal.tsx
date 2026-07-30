@@ -74,7 +74,7 @@ export const ScheduleModal: React.FC<ScheduleModalProps> = ({
     const text = encodeURIComponent(
       `Olá, Dra. Iraci Teófilo!\n\nSolicitei agendamento no site:\n*Protocolo:* ${submittedProtocol}\n*Nome:* ${formData.name}\n*Telefone:* ${formData.phone}\n*Modalidade:* ${formData.modality === 'presencial' ? 'Presencial (Goiânia)' : 'Online (Videoconferência)'}\n*Área:* ${formData.area}\n*Data Preferencial:* ${formData.preferredDate || 'A combinar'}\n*Horário:* ${formData.preferredTime}\n\nAguardo confirmação!`
     );
-    window.open(`https://wa.me/5562999887766?text=${text}`, '_blank');
+    window.open(`https://wa.me/${FIRM_INFO.phoneDigits}?text=${text}`, '_blank');
   };
 
   return (

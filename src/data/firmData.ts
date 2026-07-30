@@ -9,15 +9,15 @@ export const FIRM_INFO = {
   currentRole: "Ouvidora-Geral da OAB/GO & Conselheira Seccional",
   slogan: "Tradição, Humanização e Solidez Jurídica em Goiás",
   shortBio: "Com mais de três décadas de dedicação ininterrupta ao Direito, a Dra. Iraci Teófilo Rosa alia sólida erudição técnica à escuta humanizada, atuando como defensora intransigente das garantias constitucionais e dos direitos dos seus clientes.",
-  phoneFormatted: "(62) 99988-7766",
-  phoneDigits: "5562999887766",
+  phoneFormatted: "(62) 99245-6161",
+  phoneDigits: "5562992456161",
   email: "contato@iraciteofilo.adv.br",
   address: "Av. T-9, Ed. Orion Business & Health Complex, Salas 1402-1404, Setor Marista, Goiânia - GO, CEP 74150-030",
   workingHours: "Segunda a Sexta-feira, das 08h às 18h",
   socialLinks: {
     instagram: "https://instagram.com/iraciteofiloadvocacia",
     linkedin: "https://linkedin.com/in/iraciteofilo",
-    whatsapp: "https://wa.me/5562999887766?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20atendimento%20jur%C3%ADdico%20com%20a%20Dra.%20Iraci%20Te%C3%B3filo."
+    whatsapp: "https://wa.me/5562992456161?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20atendimento%20jur%C3%ADdico%20com%20a%20Dra.%20Iraci%20Te%C3%B3filo."
   }
 };
 
