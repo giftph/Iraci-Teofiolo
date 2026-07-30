@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&display=swap');
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-playfair: 'Playfair Display', Georgia, serif;
+    --font-inter: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-cinzel: 'Cinzel', serif;
+    
+    --color-mahogany: #6C2418;
+    --color-mahogany-dark: #4A1810;
+    --color-mahogany-deep: #32100A;
+    --color-mahogany-light: #8B3224;
+    
+    --color-gold: #C89A3B;
+    --color-gold-light: #E5C158;
+    --color-gold-dark: #9E7422;
+    
+    --color-linen: #FAF8F5;
+    --color-cream: #F5F0E8;
+  }
+
+  body {
+    font-family: var(--font-inter);
+    background-color: var(--color-linen);
+    color: #2D2725;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  h1, h2, h3, h4, .font-serif-display {
+    font-family: var(--font-playfair);
+  }
+
+  .font-brand-seal {
+    font-family: var(--font-cinzel);
+  }
+}
+
+/* ==========================================
+   DARK MODE - MAHOGANY DEEP THEME (#32100A Base)
+   ========================================== */
+html.dark, html.dark body {
+  background-color: #240C08 !important;
+  color: #FAF8F5 !important;
+}
+
+html.dark ::-webkit-scrollbar-track {
+  background: #240C08;
+}
+
+html.dark .glass-card-light {
+  background: rgba(45, 14, 8, 0.85) !important;
+  border: 1px solid rgba(200, 154, 59, 0.3) !important;
+  color: #FAF8F5 !important;
+}
+
+html.dark .glass-nav {
+  background: rgba(34, 11, 7, 0.95) !important;
+  border-bottom: 1px solid rgba(200, 154, 59, 0.35) !important;
+}
+
+html.dark .bg-\[\#FAF8F5\],
+html.dark .bg-\[\#FAF7F2\],
+html.dark .bg-\[\#F5F0E8\],
+html.dark .bg-amber-50,
+html.dark .bg-amber-50\/60,
+html.dark .bg-amber-50\/80,
+html.dark .bg-amber-100\/30,
+html.dark .bg-amber-100\/50,
+html.dark .bg-\[\#FDFBF7\],
+html.dark .bg-white {
+  background-color: #2D0E08 !important;
+  color: #FAF8F5 !important;
+}
+
+html.dark .bg-white\/90,
+html.dark .bg-white\/80 {
+  background-color: rgba(45, 14, 8, 0.9) !important;
+}
+
+html.dark .border-gray-200,
+html.dark .border-gray-300,
+html.dark .border-amber-900\/10,
+html.dark .border-amber-900\/20,
+html.dark .border-amber-900\/15 {
+  border-color: rgba(200, 154, 59, 0.3) !important;
+}
+
+html.dark .text-\[\#32100A\],
+html.dark .text-\[\#4A1810\],
+html.dark .text-gray-900,
+html.dark .text-gray-800 {
+  color: #FAF8F5 !important;
+}
+
+html.dark .text-gray-700,
+html.dark .text-gray-600,
+html.dark .text-gray-500 {
+  color: #D6C2B2 !important;
+}
+
+html.dark .text-\[\#6C2418\] {
+  color: #E5C158 !important;
+}
+
+html.dark .bg-\[\#FAF7F2\]\/60 {
+  background-color: rgba(50, 16, 10, 0.6) !important;
+}
+
+html.dark input,
+html.dark select,
+html.dark textarea {
+  background-color: #1A0805 !important;
+  color: #FAF8F5 !important;
+  border-color: rgba(200, 154, 59, 0.4) !important;
+}
+
+/* Custom background patterns and subtle watermarks */
+.bg-watermark {
+  background-image: radial-gradient(circle at center, rgba(200, 154, 59, 0.04) 0%, transparent 70%);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #E5C158 0%, #C89A3B 50%, #9E7422 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-bg {
+  background: linear-gradient(135deg, #D9AA48 0%, #C89A3B 50%, #B28328 100%);
+}
+
+.mahogany-gradient-bg {
+  background: linear-gradient(135deg, #6C2418 0%, #4A1810 70%, #32100A 100%);
+}
+
+.glass-nav {
+  background: rgba(108, 36, 24, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(200, 154, 59, 0.25);
+}
+
+.glass-card-dark {
+  background: rgba(50, 16, 10, 0.75);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(200, 154, 59, 0.2);
+}
+
+.glass-card-light {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(108, 36, 24, 0.08);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF8F5;
+}
+::-webkit-scrollbar-thumb {
+  background: #6C2418;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C89A3B;
+}
+
+/* ==========================================
+   PRINT MEDIA QUERIES (Impressão Profissional)
+   ========================================== */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 1.5cm;
+  }
+
+  /* Reset global backgrounds and text for print */
+  body, html {
+    background: #ffffff !important;
+    color: #111111 !important;
+    font-size: 11pt !important;
+    line-height: 1.5 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Hide non-essential interactive elements when printing */
+  header,
+  footer,
+  nav,
+  .no-print,
+  .glass-nav,
+  button,
+  a[href^="https://wa.me"],
+  a[href^="http"],
+  .fixed,
+  .sticky {
+    display: none !important;
+  }
+
+  /* Reset layout constraints for print pages */
+  main {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+
+  section {
+    padding: 1rem 0 !important;
+    border: none !important;
+    background: transparent !important;
+    break-inside: avoid;
+  }
+
+  /* Custom Print Header (Letterhead / Cabeçalho de Impressão) */
+  .print-only-header {
+    display: block !important;
+    border-bottom: 2pt solid #6C2418;
+    padding-bottom: 12pt;
+    margin-bottom: 18pt;
+    text-align: left;
+  }
+
+  .print-only-header h1 {
+    font-size: 18pt !important;
+    font-weight: bold !important;
+    color: #4A1810 !important;
+    margin: 0 0 2pt 0 !important;
+  }
+
+  .print-only-header p {
+    font-size: 9pt !important;
+    color: #444444 !important;
+    margin: 0 !important;
+  }
+
+  /* Document Checklist Section Print Adjustments */
+  #documentos {
+    display: block !important;
+    background: white !important;
+    padding: 0 !important;
+    border: none !important;
+  }
+
+  #documentos .grid {
+    display: block !important;
+  }
+
+  #documentos .lg\:col-span-8 {
+    width: 100% !important;
+    padding: 0 !important;
+  }
+
+  #documentos .lg\:col-span-4 {
+    display: block !important;
+    background: #fdfbf7 !important;
+    color: #111111 !important;
+    border: 1pt solid #C89A3B !important;
+    margin-top: 16pt !important;
+    padding: 12pt !important;
+    border-radius: 8px !important;
+  }
+
+  #documentos .lg\:col-span-4 * {
+    color: #222222 !important;
+  }
+
+  .print-card {
+    border: 1pt solid #dddddd !important;
+    background: #ffffff !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    margin-bottom: 8pt !important;
+    padding: 8pt 12pt !important;
+  }
+
+  /* Watermarks off during print for maximum ink economy & readability */
+  .pointer-events-none.opacity-5,
+  .pointer-events-none.opacity-\[0\.04\] {
+    display: none !important;
+  }
+
+  /* Checkbox styling on paper */
+  .print-checkbox {
+    border: 1.5pt solid #333333 !important;
+    width: 12pt !important;
+    height: 12pt !important;
+    display: inline-block !important;
+    margin-right: 6pt !important;
+  }
+
+  /* Footer for printed pages */
+  .print-footer {
+    display: block !important;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 8pt;
+    color: #777777;
+    text-align: center;
+    border-top: 0.5pt solid #cccccc;
+    padding-top: 4pt;
+  }
+}
+
+@media screen {
+  .print-only-header,
+  .print-footer {
+    display: none !important;
+  }
+}
+

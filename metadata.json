@@ -1,0 +1,6 @@
+{
+  "name": "Iraci Teófilo Advocacia",
+  "description": "Website institucional e portal de atendimento jurídico da Dra. Iraci Teófilo Rosa – Sociedade Individual de Advocacia com mais de 30 anos de excelência em Goiás.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
