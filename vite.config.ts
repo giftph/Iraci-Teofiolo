@@ -24,13 +24,13 @@ export default defineConfig(() => {
           scope: '/',
           icons: [
             {
-              src: '/src/assets/images/official_logo_seal_1785381560321.jpg',
+              src: '/assets/images/official_logo_seal_1785381560321.jpg',
               sizes: '192x192',
               type: 'image/jpeg',
               purpose: 'any maskable'
             },
             {
-              src: '/src/assets/images/official_logo_seal_1785381560321.jpg',
+              src: '/assets/images/official_logo_seal_1785381560321.jpg',
               sizes: '512x512',
               type: 'image/jpeg',
               purpose: 'any maskable'
@@ -38,7 +38,8 @@ export default defineConfig(() => {
           ]
         },
         workbox: {
-          globPatterns: ['**/*.{js,css,html,ico,png,svg,jpg,jpeg,webp,woff,woff2}']
+          globPatterns: ['**/*.{js,css,html,ico,png,svg,jpg,jpeg,webp,woff,woff2}'],
+          maximumFileSizeToCacheInBytes: 6 * 1024 * 1024,
         }
       })
     ],
