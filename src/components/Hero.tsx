@@ -125,35 +125,15 @@ export const Hero: React.FC<HeroProps> = ({ onOpenSchedule }) => {
               <div className="absolute -inset-2.5 rounded-3xl bg-gradient-to-tr from-[#C89A3B] via-[#E5C158] to-[#9E7422] opacity-40 blur-xl pointer-events-none animate-pulse duration-1000" />
 
               {/* Main Portrait Card Container */}
-              <div className="relative rounded-2xl bg-[#4A1810] border-2 border-[#C89A3B]/70 p-3.5 shadow-2xl overflow-hidden group">
+              <div className="relative rounded-2xl bg-[#4A1810] border-2 border-[#C89A3B]/70 p-3 shadow-2xl overflow-hidden group">
                 
-                <div className="relative aspect-[3/4] rounded-xl overflow-hidden bg-[#32100A]">
+                <div className="relative rounded-xl overflow-hidden bg-[#32100A]">
                   <img
-                    src="/src/assets/images/dra_iraci_portrait_new_1785413939341.jpg"
+                    src="/src/assets/images/inicio.png"
                     alt="Dra. Iraci Teófilo Rosa - Sociedade Individual de Advocacia"
-                    className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                    className="w-full h-auto object-cover rounded-xl transition-transform duration-700 group-hover:scale-102"
                     referrerPolicy="no-referrer"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#32100A] via-[#32100A]/20 to-transparent opacity-85" />
-
-                  {/* Floating Seal Badge */}
-                  <div className="absolute top-4 right-4 bg-[#6C2418]/90 backdrop-blur-md border border-[#C89A3B] px-3.5 py-1.5 rounded-full text-[11px] font-bold text-[#E5C158] shadow-xl flex items-center space-x-1.5">
-                    <ShieldCheck className="w-3.5 h-3.5 text-[#E5C158]" />
-                    <span>OAB/GO {FIRM_INFO.oabNumber}</span>
-                  </div>
-
-                  {/* Bottom Portrait Caption Overlay */}
-                  <div className="absolute bottom-4 left-4 right-4 text-left p-4.5 bg-[#4A1810]/95 backdrop-blur-md rounded-xl border border-[#C89A3B]/50 shadow-xl space-y-1">
-                    <h2 className="text-xl font-serif-display font-bold text-white">
-                      {FIRM_INFO.lawyerName}
-                    </h2>
-                    <p className="text-xs text-[#E5C158] font-semibold">
-                      Advogada Titular e Ouvidora-Geral da OAB/GO
-                    </p>
-                    <p className="text-[11px] text-amber-100/90 pt-1 italic leading-relaxed">
-                      "A advocacia não é apenas a aplicação da lei, é o sacerdócio da justiça, da ética e do acolhimento humano."
-                    </p>
-                  </div>
                 </div>
 
               </div>
