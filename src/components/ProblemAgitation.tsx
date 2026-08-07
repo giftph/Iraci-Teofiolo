@@ -129,7 +129,7 @@ export const ProblemAgitation: React.FC<ProblemAgitationProps> = ({ onOpenSchedu
               </button>
 
               <span className="text-[11px] text-amber-200/70 font-medium">
-                ⚡ Resposta em menos de 15 minutos via WhatsApp
+                ⚡ Atendimento Direto via WhatsApp
               </span>
             </div>
 

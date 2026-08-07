@@ -105,10 +105,10 @@ useEffect(() => {
       {/* Helmet SEO Meta Tags */}
       <Helmet>
         <html lang="pt-BR" />
-        <title>Dra. Iraci Teófilo Rosa | Advocacia & Consultoria Jurídica em Goiânia</title>
-        <meta name="description" content="Escritório de advocacia da Dra. Iraci Teófilo Rosa, Ouvidora-Geral da OAB/GO e Conselheira Seccional. Advocacia de alta performance em Direito Cível, Família, Sucessões e Direito Público em Goiânia." />
-        <meta name="keywords" content="Advogada Goiânia, Dra Iraci Teófilo Rosa, Ouvidora OAB GO, Escritório de Advocacia Goiânia, Direito Cível Goiânia, Inventário e Sucessões, Direito Administrativo Goiás" />
-        <meta name="author" content="Iraci Teófilo - Sociedade Individual de Advocacia" />
+        <title>Iraci Teófilo Advocacia | Advogada em Goiânia - GO</title>
+        <meta name="description" content="Iraci Teófilo Advocacia. Atendimento jurídico em Goiânia - GO. Agende sua consulta pelo WhatsApp." />
+        <meta name="keywords" content="Iraci Teófilo Advocacia, Advogada Goiânia, OAB GO 12216, Palácio do Comércio, Direito Cível Goiânia, Advogado Centro Goiânia, Inventário e Sucessões" />
+        <meta name="author" content="Iraci Teófilo Advocacia" />
         <meta name="theme-color" content="#6C2418" />
         <link rel="canonical" href="https://iraciteofilo.adv.br" />
 
@@ -116,15 +116,61 @@ useEffect(() => {
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="pt_BR" />
         <meta property="og:site_name" content="Iraci Teófilo Advocacia" />
-        <meta property="og:title" content="Dra. Iraci Teófilo Rosa | Advocacia & Consultoria Jurídica em Goiânia" />
-        <meta property="og:description" content="Mais de 30 anos de liderança e ética na advocacia em Goiás. Atendimento personalizado no Orion Business & Health Complex em Goiânia e videoconferência nacional." />
+        <meta property="og:title" content="Iraci Teófilo Advocacia | Advogada em Goiânia - GO" />
+        <meta property="og:description" content="Iraci Teófilo Advocacia. Atendimento jurídico em Goiânia - GO. Agende sua consulta pelo WhatsApp." />
+        <meta property="og:url" content="https://iraciteofilo.adv.br" />
         <meta property="og:image" content="/assets/images/official_logo_seal_1785381560321.jpg" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Dra. Iraci Teófilo Rosa | Advocacia & Consultoria Jurídica" />
-        <meta name="twitter:description" content="Atuação ética, humanizada e estratégica com Ouvidoria-Geral OAB/GO e Conselheira Seccional." />
+        <meta name="twitter:title" content="Iraci Teófilo Advocacia | Advogada em Goiânia - GO" />
+        <meta name="twitter:description" content="Iraci Teófilo Advocacia. Atendimento jurídico em Goiânia - GO. Agende sua consulta pelo WhatsApp." />
         <meta name="twitter:image" content="/assets/images/official_logo_seal_1785381560321.jpg" />
+
+        {/* Schema.org Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LegalService",
+            "name": "Iraci Teófilo Advocacia",
+            "image": "https://iraciteofilo.adv.br/assets/images/official_logo_seal_1785381560321.jpg",
+            "description": "Iraci Teófilo Advocacia. Atendimento jurídico em Goiânia - GO. Agende sua consulta pelo WhatsApp.",
+            "url": "https://iraciteofilo.adv.br",
+            "telephone": "+5562992456161",
+            "email": "iraciteofiloadv@gmail.com",
+            "taxID": "26.484.267/0001-95",
+            "identifier": "OAB/GO 12.216",
+            "priceRange": "$$",
+            "areaServed": [
+              {
+                "@type": "State",
+                "name": "Goiás"
+              },
+              {
+                "@type": "City",
+                "name": "Goiânia"
+              }
+            ],
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Av. Anhanguera, nº 5674, Sala 1102, Condomínio Palácio do Comércio",
+              "addressLocality": "Goiânia",
+              "addressRegion": "GO",
+              "postalCode": "74043-010",
+              "addressCountry": "BR"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": -16.6789,
+              "longitude": -49.2612
+            },
+            "openingHours": "Mo-Fr 08:00-18:00",
+            "sameAs": [
+              "https://instagram.com/iraciteofiloadvocacia",
+              "https://linkedin.com/in/iraciteofilo"
+            ]
+          })}
+        </script>
       </Helmet>
 
       {/* Branded Loading Overlay */}

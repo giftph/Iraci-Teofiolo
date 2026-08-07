@@ -159,7 +159,7 @@ export const LegalDocumentsSection: React.FC<LegalDocumentsSectionProps> = ({
       }),
       `--------------------------------------------------`,
       `Agende seu atendimento: ${FIRM_INFO.phoneFormatted} | ${FIRM_INFO.email}`,
-      `Goiânia - GO | Orion Business & Health Complex`
+      `Goiânia - GO | Condomínio Palácio do Comércio - Centro`
     ];
 
     navigator.clipboard.writeText(lines.join('\n\n'));
@@ -171,7 +171,7 @@ export const LegalDocumentsSection: React.FC<LegalDocumentsSectionProps> = ({
     const textContent = [
       `==================================================`,
       `IRACI TEÓFILO - SOCIEDADE INDIVIDUAL DE ADVOCACIA`,
-      `OAB/GO 12.345 | Dra. Iraci Teófilo Rosa`,
+      `${FIRM_INFO.oabNumber} | ${FIRM_INFO.lawyerName}`,
       `CHECKLIST DE DOCUMENTAÇÃO RECOMENDADA - ${currentGroup.title.toUpperCase()}`,
       `==================================================\n`,
       `Orientação prévia de documentação para agilizar a análise e parecer na sua consulta jurídica.\n`,

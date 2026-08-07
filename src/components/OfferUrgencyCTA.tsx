@@ -89,7 +89,7 @@ export const OfferUrgencyCTA: React.FC<OfferUrgencyCTAProps> = ({ onOpenSchedule
               </span>
               <span className="flex items-center space-x-1.5">
                 <ShieldCheck className="w-4 h-4 text-[#E5C158]" />
-                <span>Atendimento Presencial no Orion Business Complex ou Online Seguro</span>
+                <span>Atendimento Presencial no Palácio do Comércio ou Online Seguro</span>
               </span>
             </div>
           </div>

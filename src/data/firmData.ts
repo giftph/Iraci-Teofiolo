@@ -1,23 +1,23 @@
 import { PracticeArea, InstitutionalRole, ClientJourneyStep, FAQItem, TrajectoryMilestone } from '../types';
 
 export const FIRM_INFO = {
-  lawyerName: "Dra. Iraci Teófilo Rosa",
-  firmName: "Iraci Teófilo – Sociedade Individual de Advocacia",
-  oabNumber: "OAB/GO 12.345",
-  cnpj: "42.890.123/0001-90",
+  lawyerName: "Dra. Iraci Teófilo",
+  firmName: "Iraci Teófilo Advocacia",
+  oabNumber: "OAB/GO 12.216",
+  cnpj: "26.484.267/0001-95",
   experienceYears: "30+",
   currentRole: "Ouvidora-Geral da OAB/GO & Conselheira Seccional",
   slogan: "Tradição, Humanização e Solidez Jurídica em Goiás",
-  shortBio: "Com mais de três décadas de dedicação ininterrupta ao Direito, a Dra. Iraci Teófilo Rosa alia sólida erudição técnica à escuta humanizada, atuando como defensora intransigente das garantias constitucionais e dos direitos dos seus clientes.",
+  shortBio: "Com mais de três décadas de dedicação ininterrupta ao Direito, a Dra. Iraci Teófilo alia sólida erudição técnica à escuta humanizada, atuando como defensora intransigente das garantias constitucionais e dos direitos dos seus clientes.",
   phoneFormatted: "(62) 99245-6161",
   phoneDigits: "5562992456161",
-  email: "contato@iraciteofilo.adv.br",
-  address: "Av. T-9, Ed. Orion Business & Health Complex, Salas 1402-1404, Setor Marista, Goiânia - GO, CEP 74150-030",
+  email: "iraciteofiloadv@gmail.com",
+  address: "Condomínio Palácio do Comércio - Av. Anhanguera, nº 5674, Sala 1102, Centro, Goiânia - GO, CEP 74043-010",
   workingHours: "Segunda a Sexta-feira, das 08h às 18h",
   socialLinks: {
     instagram: "https://instagram.com/iraciteofiloadvocacia",
     linkedin: "https://linkedin.com/in/iraciteofilo",
-    whatsapp: "https://wa.me/5562992456161?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20atendimento%20jur%C3%ADdico%20com%20a%20Dra.%20Iraci%20Te%C3%B3filo."
+    whatsapp: "https://wa.me/5562992456161?text=Ol%C3%A1%2C%20encontrei%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta."
   }
 };
 
@@ -216,7 +216,7 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     id: "faq-1",
     question: "Como funciona a primeira consulta com a Dra. Iraci Teófilo?",
-    answer: "A consulta pode ser realizada presencialmente no nosso escritório no Edifício Orion Business em Goiânia ou por videoconferência segura (Google Meet/WhatsApp Video). Durante o atendimento, que dura em média 1 hora, a Dra. Iraci analisa pessoalmente os seus documentos, tira todas as suas dúvidas e apresenta um parecer inicial de viabilidade jurídica.",
+    answer: "A consulta pode ser realizada presencialmente no nosso escritório no Condomínio Palácio do Comércio (Centro, Goiânia) ou por videoconferência segura (Google Meet/WhatsApp Video). Durante o atendimento, que dura em média 1 hora, a Dra. Iraci analisa pessoalmente os seus documentos, tira todas as suas dúvidas e apresenta um parecer inicial de viabilidade jurídica.",
     category: "atendimento"
   },
   {

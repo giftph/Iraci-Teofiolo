@@ -104,7 +104,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenSchedule }) => {
               </div>
               <div className="flex items-center space-x-2">
                 <CheckCircle2 className="w-3.5 h-3.5 text-[#E5C158] shrink-0" />
-                <span>Resposta em até 15 minutos</span>
+                <span>Atendimento Ágil e Humanizado</span>
               </div>
               <div className="flex items-center space-x-2">
                 <CheckCircle2 className="w-3.5 h-3.5 text-[#E5C158] shrink-0" />

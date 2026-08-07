@@ -77,30 +77,64 @@ export const Footer: React.FC = () => {
           </div>
 
           {/* Address & Contact Column (5 cols) */}
-          <div className="lg:col-span-5 space-y-3">
+          <div className="lg:col-span-5 space-y-4">
             <h4 className="text-sm font-bold text-white uppercase tracking-wider font-serif-display border-b border-[#C89A3B]/20 pb-2">
               Atendimento & Localização
             </h4>
             <div className="space-y-2.5 text-xs">
               <div className="flex items-start space-x-2.5">
                 <MapPin className="w-4 h-4 text-[#E5C158] shrink-0 mt-0.5" />
-                <span>{FIRM_INFO.address}</span>
+                <span className="leading-relaxed">
+                  <strong>Condomínio Palácio do Comércio</strong><br />
+                  Av. Anhanguera, 5674 - Sala 1102<br />
+                  Centro • Goiânia - GO, CEP 74043-010
+                </span>
               </div>
 
               <div className="flex items-center space-x-2.5">
                 <Phone className="w-4 h-4 text-[#E5C158] shrink-0" />
-                <span>{FIRM_INFO.phoneFormatted}</span>
+                <a href={`tel:+${FIRM_INFO.phoneDigits}`} className="hover:text-[#E5C158] transition-colors">
+                  Telefone / WhatsApp: {FIRM_INFO.phoneFormatted}
+                </a>
               </div>
 
               <div className="flex items-center space-x-2.5">
                 <Mail className="w-4 h-4 text-[#E5C158] shrink-0" />
-                <span>{FIRM_INFO.email}</span>
+                <a href={`mailto:${FIRM_INFO.email}`} className="hover:text-[#E5C158] transition-colors">
+                  E-mail: {FIRM_INFO.email}
+                </a>
               </div>
 
               <div className="flex items-center space-x-2.5">
                 <Clock className="w-4 h-4 text-[#E5C158] shrink-0" />
                 <span>{FIRM_INFO.workingHours}</span>
               </div>
+            </div>
+
+            {/* Google Maps Embed & Como Chegar Button */}
+            <div className="pt-2 space-y-3">
+              <div className="w-full h-36 rounded-xl overflow-hidden border border-[#C89A3B]/30 shadow-md">
+                <iframe
+                  title="Localização Iraci Teófilo Advocacia - Condomínio Palácio do Comércio"
+                  src="https://maps.google.com/maps?q=Av.%20Anhanguera%2C%205674%20-%20Centro%2C%20Goi%C3%A2nia%20-%20GO%2C%2074043-010&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen={false}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+
+              <a
+                href="https://www.google.com/maps/dir/?api=1&destination=Condom%C3%ADnio+Pal%C3%A1cio+do+Com%C3%A9rcio,+Av.+Anhanguera,+5674+-+Sala+1102,+Centro,+Goi%C3%A2nia+-+GO,+74043-010"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center space-x-2 w-full py-2.5 px-4 rounded-xl bg-[#C89A3B] hover:bg-[#E5C158] text-[#32100A] font-bold text-xs uppercase tracking-wider transition-all shadow-md group"
+              >
+                <MapPin className="w-4 h-4 group-hover:scale-110 transition-transform" />
+                <span>Como chegar</span>
+              </a>
             </div>
           </div>
 

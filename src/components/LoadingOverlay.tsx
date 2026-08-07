@@ -64,7 +64,7 @@ export const LoadingOverlay: React.FC<LoadingOverlayProps> = ({ isLoading }) => 
             <span>Sociedade Individual de Advocacia</span>
           </div>
           <p className="text-[11px] text-amber-200/70 pt-1 font-mono">
-            OAB/GO {FIRM_INFO.oabNumber} | Ouvidoria-Geral OAB/GO
+            {FIRM_INFO.oabNumber} | Ouvidoria-Geral OAB/GO
           </p>
         </div>
 

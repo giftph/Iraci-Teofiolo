@@ -23,8 +23,8 @@ export const CredibilityBar: React.FC = () => {
     },
     {
       icon: MapPin,
-      value: "Setor Marista",
-      label: "Goiânia - GO (Ed. Orion)",
+      value: "Centro",
+      label: "Goiânia - GO (Palácio do Comércio)",
       sublabel: "Estrutura de Alta Classe"
     }
   ];

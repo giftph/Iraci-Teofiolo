@@ -136,7 +136,7 @@ export const ScheduleModal: React.FC<ScheduleModalProps> = ({
                   <MapPin className="w-4 h-4 text-[#C89A3B] shrink-0" />
                   <div>
                     <span className="block text-xs">Presencial em Goiânia</span>
-                    <span className="block text-[10px] text-gray-500 font-normal">Edifício Orion - Setor Marista</span>
+                    <span className="block text-[10px] text-gray-500 font-normal">Palácio do Comércio - Centro</span>
                   </div>
                 </button>
 
@@ -305,7 +305,7 @@ export const ScheduleModal: React.FC<ScheduleModalProps> = ({
 
             <div className="p-4 rounded-xl bg-[#FAF8F5] border border-[#6C2418]/15 text-left text-xs space-y-1.5 max-w-md mx-auto">
               <p className="font-bold text-[#6C2418]">Detalhes da Reserva:</p>
-              <p>• <strong>Modalidade:</strong> {formData.modality === 'presencial' ? 'Presencial no Ed. Orion (Goiânia)' : 'Online por Videoconferência'}</p>
+              <p>• <strong>Modalidade:</strong> {formData.modality === 'presencial' ? 'Presencial no Palácio do Comércio (Goiânia)' : 'Online por Videoconferência'}</p>
               <p>• <strong>WhatsApp:</strong> {formData.phone}</p>
               <p>• <strong>Previsão:</strong> {formData.preferredDate || 'A combinar'} ({formData.preferredTime})</p>
             </div>
