@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion } from 'motion/react';
-import { ShieldCheck, CheckCircle2, Clock, Calendar, MessageCircle, ArrowRight, Lock, Award } from 'lucide-react';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
+import { ShieldCheck, CheckCircle2, Clock, Calendar, MessageCircle, ArrowRight, Lock, Award, ChevronDown } from 'lucide-react';
 import { FIRM_INFO } from '../data/firmData';
 
 interface OfferUrgencyCTAProps {
@@ -8,6 +8,8 @@ interface OfferUrgencyCTAProps {
 }
 
 export const OfferUrgencyCTA: React.FC<OfferUrgencyCTAProps> = ({ onOpenSchedule }) => {
+  const [isBenefitsOpen, setIsBenefitsOpen] = useState(false);
+
   /* CRO PRINCIPLE: Value Anchoring + Genuine Scarcity + Risk Reversal
      - Explains exactly what the client receives in the initial case analysis
      - Anchors high value (individual audit, strategy roadmap)
@@ -40,57 +42,87 @@ export const OfferUrgencyCTA: React.FC<OfferUrgencyCTAProps> = ({ onOpenSchedule
             Para assegurar a máxima profundidade técnica e acompanhamento rigoroso, a <strong className="text-white font-semibold">Dra. Iraci Teófilo Rosa</strong> limita o número de novas análises semanais. Garanta seu atendimento prioritário hoje.
           </p>
 
-          {/* Value Stack Card: What's Included */}
-          <div className="p-8 sm:p-10 rounded-3xl bg-[#2D0E08]/90 border border-[#C89A3B]/50 shadow-2xl backdrop-blur-md text-left my-8 space-y-6">
-            <h3 className="text-xl font-serif-display font-bold text-[#E5C158] border-b border-[#C89A3B]/30 pb-4 flex items-center space-x-2">
-              <Award className="w-5 h-5 text-[#E5C158]" />
-              <span>O Que Está Incluso no Seu Atendimento Inicial:</span>
-            </h3>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="flex items-start space-x-3 p-3 rounded-xl bg-[#32100A]/80 border border-[#C89A3B]/20">
-                <CheckCircle2 className="w-5 h-5 text-[#E5C158] shrink-0 mt-0.5" />
-                <div>
-                  <h4 className="text-sm font-bold text-white">Análise Pessoal do Caso</h4>
-                  <p className="text-xs text-white/80">Exame detalhado dos fatos e documentos pela própria Dra. Iraci Teófilo.</p>
+          {/* Expandable Value Stack Accordion: What's Included */}
+          <div className="rounded-3xl bg-[#2D0E08]/90 border border-[#C89A3B]/50 shadow-2xl backdrop-blur-md text-left my-8 overflow-hidden transition-all">
+            {/* Toggle Button Header */}
+            <button
+              type="button"
+              onClick={() => setIsBenefitsOpen(!isBenefitsOpen)}
+              aria-expanded={isBenefitsOpen}
+              className="w-full p-6 sm:p-7 flex items-center justify-between gap-4 text-left cursor-pointer hover:bg-[#3E140C]/60 transition-colors group"
+            >
+              <div className="flex items-center space-x-3">
+                <div className="p-2 rounded-xl bg-[#C89A3B]/20 border border-[#C89A3B]/40 text-[#E5C158]">
+                  <Award className="w-5 h-5" />
                 </div>
+                <span className="text-lg sm:text-xl font-serif-display font-bold text-[#E5C158] group-hover:text-amber-300 transition-colors">
+                  {isBenefitsOpen ? 'Ver menos' : 'O que está incluso no seu atendimento inicial'}
+                </span>
               </div>
 
-              <div className="flex items-start space-x-3 p-3 rounded-xl bg-[#32100A]/80 border border-[#C89A3B]/20">
-                <CheckCircle2 className="w-5 h-5 text-[#E5C158] shrink-0 mt-0.5" />
-                <div>
-                  <h4 className="text-sm font-bold text-white">Diagnóstico de Riscos & Oportunidades</h4>
-                  <p className="text-xs text-white/80">Mapeamento da jurisprudência atual do TJGO, STJ e STF aplicável ao seu caso.</p>
+              <div className="flex items-center space-x-2 text-xs text-[#E5C158]/80 font-medium">
+                <span className="hidden sm:inline">{isBenefitsOpen ? 'Recolher detalhes' : 'Clique para ver'}</span>
+                <ChevronDown
+                  className={`w-5 h-5 text-[#E5C158] transition-transform duration-300 ${
+                    isBenefitsOpen ? 'rotate-180' : 'rotate-0'
+                  }`}
+                />
+              </div>
+            </button>
+
+            {/* Smooth Collapsible Content */}
+            <div
+              className={`transition-all duration-300 ease-in-out ${
+                isBenefitsOpen ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0 pointer-events-none'
+              } overflow-hidden`}
+            >
+              <div className="px-6 pb-6 sm:px-8 sm:pb-8 pt-2 space-y-6 border-t border-[#C89A3B]/20">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+                  <div className="flex items-start space-x-3 p-3.5 rounded-xl bg-[#32100A]/80 border border-[#C89A3B]/20">
+                    <CheckCircle2 className="w-5 h-5 text-[#E5C158] shrink-0 mt-0.5" />
+                    <div>
+                      <h4 className="text-sm font-bold text-white">Análise Pessoal do Caso</h4>
+                      <p className="text-xs text-white/80">Exame detalhado dos fatos e documentos pela própria Dra. Iraci Teófilo.</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-3 p-3.5 rounded-xl bg-[#32100A]/80 border border-[#C89A3B]/20">
+                    <CheckCircle2 className="w-5 h-5 text-[#E5C158] shrink-0 mt-0.5" />
+                    <div>
+                      <h4 className="text-sm font-bold text-white">Diagnóstico de Riscos & Oportunidades</h4>
+                      <p className="text-xs text-white/80">Mapeamento da jurisprudência atual do TJGO, STJ e STF aplicável ao seu caso.</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-3 p-3.5 rounded-xl bg-[#32100A]/80 border border-[#C89A3B]/20">
+                    <CheckCircle2 className="w-5 h-5 text-[#E5C158] shrink-0 mt-0.5" />
+                    <div>
+                      <h4 className="text-sm font-bold text-white">Plano de Ação Personalizado</h4>
+                      <p className="text-xs text-white/80">Estratégia clara de atuação (via extrajudicial rápida ou contencioso judicial).</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-3 p-3.5 rounded-xl bg-[#32100A]/80 border border-[#C89A3B]/20">
+                    <CheckCircle2 className="w-5 h-5 text-[#E5C158] shrink-0 mt-0.5" />
+                    <div>
+                      <h4 className="text-sm font-bold text-white">Transparência de Honorários</h4>
+                      <p className="text-xs text-white/80">Proposta clara em total conformidade com a Tabela da OAB/GO, sem custos ocultos.</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Friction Reducers Bar */}
+                <div className="pt-4 border-t border-[#C89A3B]/20 flex flex-wrap items-center justify-between gap-4 text-xs text-white/80">
+                  <span className="flex items-center space-x-1.5">
+                    <Lock className="w-4 h-4 text-[#E5C158]" />
+                    <span>Sigilo Profissional Absoluto Regido pelo Estatuto da OAB</span>
+                  </span>
+                  <span className="flex items-center space-x-1.5">
+                    <ShieldCheck className="w-4 h-4 text-[#E5C158]" />
+                    <span>Atendimento Presencial no Palácio do Comércio ou Online Seguro</span>
+                  </span>
                 </div>
               </div>
-
-              <div className="flex items-start space-x-3 p-3 rounded-xl bg-[#32100A]/80 border border-[#C89A3B]/20">
-                <CheckCircle2 className="w-5 h-5 text-[#E5C158] shrink-0 mt-0.5" />
-                <div>
-                  <h4 className="text-sm font-bold text-white">Plano de Ação Personalizado</h4>
-                  <p className="text-xs text-white/80">Estratégia clara de atuação (via extrajudicial rápida ou contencioso judicial).</p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-3 p-3 rounded-xl bg-[#32100A]/80 border border-[#C89A3B]/20">
-                <CheckCircle2 className="w-5 h-5 text-[#E5C158] shrink-0 mt-0.5" />
-                <div>
-                  <h4 className="text-sm font-bold text-white">Transparência de Honorários</h4>
-                  <p className="text-xs text-white/80">Proposta clara em total conformidade com a Tabela da OAB/GO, sem custos ocultos.</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Friction Reducers Bar */}
-            <div className="pt-4 border-t border-[#C89A3B]/20 flex flex-wrap items-center justify-between gap-4 text-xs text-white/80">
-              <span className="flex items-center space-x-1.5">
-                <Lock className="w-4 h-4 text-[#E5C158]" />
-                <span>Sigilo Profissional Absoluto Regido pelo Estatuto da OAB</span>
-              </span>
-              <span className="flex items-center space-x-1.5">
-                <ShieldCheck className="w-4 h-4 text-[#E5C158]" />
-                <span>Atendimento Presencial no Palácio do Comércio ou Online Seguro</span>
-              </span>
             </div>
           </div>
 
@@ -110,6 +142,7 @@ export const OfferUrgencyCTA: React.FC<OfferUrgencyCTAProps> = ({ onOpenSchedule
               href={FIRM_INFO.socialLinks.whatsapp}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Falar diretamente no WhatsApp"
               className="w-full sm:w-auto inline-flex items-center justify-center space-x-3 px-8 py-5 rounded-2xl text-base font-bold text-emerald-300 bg-emerald-950/90 border border-emerald-500/50 hover:bg-emerald-900 transition-all shadow-xl active:scale-[0.98] cursor-pointer"
             >
               <MessageCircle className="w-5 h-5 text-emerald-400" />
