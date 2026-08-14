@@ -11,7 +11,9 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ onOpenSchedule }) => {
   return (
-    <section id="hero" className="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-[#6C2418] text-white overflow-hidden">
+    <section id="inicio" className="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-[#6C2418] text-white overflow-hidden scroll-mt-24">
+      {/* Invisible anchor for backward compatibility */}
+      <span id="hero" className="sr-only" />
       {/* Official Law Firm Logo Watermark Background */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0 overflow-hidden select-none">
         <img
@@ -68,7 +70,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenSchedule }) => {
             </h1>
 
             {/* CRO PRINCIPLE: Subheadline clarifying target audience & unique value */}
-            <p className="text-base sm:text-lg text-amber-100/90 font-normal leading-relaxed max-w-2xl">
+            <p className="text-base sm:text-lg text-white/90 font-normal leading-relaxed max-w-2xl">
               Atendimento jurídico estratégico e altamente personalizado conduzido diretamente pela <strong className="text-white font-semibold">Dra. Iraci Teófilo Rosa</strong>, Ouvidora-Geral da OAB/GO com mais de 30 anos de solidez em Goiânia.
             </p>
 
@@ -89,7 +91,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenSchedule }) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Falar diretamente no WhatsApp"
-                className="inline-flex items-center justify-center space-x-2.5 px-6 py-4 rounded-xl text-sm font-semibold text-emerald-300 bg-emerald-950/80 border border-emerald-500/40 hover:bg-emerald-900/90 transition-all shadow-md active:scale-[0.98]"
+                className="inline-flex items-center justify-center space-x-2.5 px-6 py-4 rounded-xl text-sm font-semibold text-emerald-300 bg-emerald-950/80 border border-emerald-500/40 hover:bg-emerald-900/90 transition-all shadow-md active:scale-[0.98] cursor-pointer"
               >
                 <MessageCircle className="w-4.5 h-4.5 text-emerald-400" />
                 <span>WhatsApp Direto</span>
@@ -97,7 +99,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenSchedule }) => {
             </div>
 
             {/* CRO PRINCIPLE: Microcopy reducing friction and establishing immediate safety */}
-            <div className="pt-5 grid grid-cols-1 sm:grid-cols-3 gap-3 border-t border-[#C89A3B]/20 text-xs text-amber-200/80">
+            <div className="pt-5 grid grid-cols-1 sm:grid-cols-3 gap-3 border-t border-[#C89A3B]/20 text-xs text-white/80">
               <div className="flex items-center space-x-2">
                 <CheckCircle2 className="w-3.5 h-3.5 text-[#E5C158] shrink-0" />
                 <span>Análise Sem Compromisso</span>

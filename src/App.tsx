@@ -100,7 +100,7 @@ useEffect(() => {
   };
 
   return (
-    <div className="min-h-screen bg-[#FAF8F5] font-sans antialiased selection:bg-[#C89A3B] selection:text-white relative">
+    <div className="min-h-screen bg-[#240C08] text-white font-sans antialiased selection:bg-[#C89A3B] selection:text-[#32100A] relative">
       
       {/* Helmet SEO Meta Tags */}
       <Helmet>

@@ -9,7 +9,7 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-[#32100A] text-amber-100/90 border-t-2 border-[#C89A3B]/40 pt-16 pb-8 relative text-left">
+    <footer id="contato" className="bg-[#240C08] text-white border-t-2 border-[#C89A3B]/40 pt-16 pb-8 relative text-left scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         
         {/* Top Grid */}
@@ -30,62 +30,74 @@ export const Footer: React.FC = () => {
                 <span className="font-serif-display font-bold text-white text-lg block">
                   Iraci Teófilo
                 </span>
-                <span className="text-[10px] text-[#C89A3B] uppercase tracking-widest block font-medium">
+                <span className="text-[10px] text-[#E5C158] uppercase tracking-widest block font-medium">
                   Sociedade Individual de Advocacia
                 </span>
               </div>
             </div>
 
-            <p className="text-xs text-amber-100/80 leading-relaxed">
+            <p className="text-xs text-white/80 leading-relaxed">
               Advocacia de excelência e alta performance em Goiás. Mais de 30 anos dedicados à defesa intransigente dos direitos dos nossos clientes com integridade e rigor técnico.
             </p>
 
             <div className="pt-1 flex items-center space-x-2 text-xs text-[#E5C158]">
-              <ShieldCheck className="w-4 h-4" />
-              <span>Inscrição Regular OAB/GO Nº {FIRM_INFO.oabNumber}</span>
+              <ShieldCheck className="w-4 h-4 text-[#E5C158]" />
+              <span className="text-white">Inscrição Regular OAB/GO Nº {FIRM_INFO.oabNumber}</span>
             </div>
-            <div className="text-[11px] text-amber-200/60 font-mono">
+            <div className="text-[11px] text-white/70 font-mono">
               CNPJ: {FIRM_INFO.cnpj}
             </div>
           </div>
 
           {/* Quick Links Column (3 cols) */}
           <div className="lg:col-span-3 space-y-3">
-            <h4 className="text-sm font-bold text-white uppercase tracking-wider font-serif-display border-b border-[#C89A3B]/20 pb-2">
-              Navegação
+            <h4 className="text-sm font-bold text-white uppercase tracking-wider font-serif-display border-b border-[#C89A3B]/30 pb-2">
+              Navegação Rápida
             </h4>
-            <ul className="space-y-2 text-xs">
+            <ul className="space-y-2 text-xs text-white/85">
               <li>
-                <a href="#hero" className="hover:text-[#E5C158] transition-colors">Início & Apresentação</a>
+                <a href="#hero" className="hover:text-[#E5C158] transition-colors">1. Início</a>
               </li>
               <li>
-                <a href="#perfil" className="hover:text-[#E5C158] transition-colors">Dra. Iraci Teófilo Rosa</a>
+                <a href="#perfil" className="hover:text-[#E5C158] transition-colors">2. A Advogada</a>
               </li>
               <li>
-                <a href="#institucional" className="hover:text-[#E5C158] transition-colors">Ouvidoria & Conselho OAB/GO</a>
+                <a href="#trajetoria" className="hover:text-[#E5C158] transition-colors">3. Trajetória (1994–Atual)</a>
               </li>
               <li>
-                <a href="#areas" className="hover:text-[#E5C158] transition-colors">Especialidades Jurídicas</a>
+                <a href="#institucional" className="hover:text-[#E5C158] transition-colors">4. OAB & Liderança</a>
               </li>
               <li>
-                <a href="#jornada" className="hover:text-[#E5C158] transition-colors">Jornada de Atendimento</a>
+                <a href="#areas" className="hover:text-[#E5C158] transition-colors">5. Áreas de Atuação</a>
               </li>
               <li>
-                <a href="#faq" className="hover:text-[#E5C158] transition-colors">Perguntas Frequentes</a>
+                <a href="#depoimentos" className="hover:text-[#E5C158] transition-colors">6. Depoimentos de Clientes</a>
+              </li>
+              <li>
+                <a href="#jornada" className="hover:text-[#E5C158] transition-colors">7. Jornada do Cliente</a>
+              </li>
+              <li>
+                <a href="#documentos" className="hover:text-[#E5C158] transition-colors">8. Documentação Recomendada</a>
+              </li>
+              <li>
+                <a href="#faq" className="hover:text-[#E5C158] transition-colors">9. Dúvidas Frequentes</a>
+              </li>
+              <li>
+                <a href="#contato" className="hover:text-[#E5C158] transition-colors">10. Contato & Localização</a>
               </li>
             </ul>
           </div>
 
           {/* Address & Contact Column (5 cols) */}
           <div className="lg:col-span-5 space-y-4">
-            <h4 className="text-sm font-bold text-white uppercase tracking-wider font-serif-display border-b border-[#C89A3B]/20 pb-2">
+            <h4 className="text-sm font-bold text-white uppercase tracking-wider font-serif-display border-b border-[#C89A3B]/30 pb-2">
               Atendimento & Localização
             </h4>
-            <div className="space-y-2.5 text-xs">
+            <div className="space-y-2.5 text-xs text-white/90">
               <div className="flex items-start space-x-2.5">
                 <MapPin className="w-4 h-4 text-[#E5C158] shrink-0 mt-0.5" />
                 <span className="leading-relaxed">
-                  <strong>Condomínio Palácio do Comércio</strong><br />
+                  <strong className="text-white">Condomínio Palácio do Comércio</strong><br />
                   Av. Anhanguera, 5674 - Sala 1102<br />
                   Centro • Goiânia - GO, CEP 74043-010
                 </span>
@@ -130,7 +142,7 @@ export const Footer: React.FC = () => {
                 href="https://www.google.com/maps/dir/?api=1&destination=Condom%C3%ADnio+Pal%C3%A1cio+do+Com%C3%A9rcio,+Av.+Anhanguera,+5674+-+Sala+1102,+Centro,+Goi%C3%A2nia+-+GO,+74043-010"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center space-x-2 w-full py-2.5 px-4 rounded-xl bg-[#C89A3B] hover:bg-[#E5C158] text-[#32100A] font-bold text-xs uppercase tracking-wider transition-all shadow-md group"
+                className="inline-flex items-center justify-center space-x-2 w-full py-2.5 px-4 rounded-xl bg-[#C89A3B] hover:bg-[#E5C158] text-[#32100A] font-bold text-xs uppercase tracking-wider transition-all shadow-md group cursor-pointer"
               >
                 <MapPin className="w-4 h-4 group-hover:scale-110 transition-transform" />
                 <span>Como chegar</span>
@@ -141,19 +153,19 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Bottom LGPD & Copyright Row */}
-        <div className="pt-8 border-t border-[#C89A3B]/20 flex flex-col sm:flex-row items-center justify-between text-[11px] text-amber-200/60 space-y-4 sm:space-y-0">
+        <div className="pt-8 border-t border-[#C89A3B]/20 flex flex-col sm:flex-row items-center justify-between text-[11px] text-white/70 space-y-4 sm:space-y-0">
           <div className="space-y-1 text-center sm:text-left">
             <p>
               © {new Date().getFullYear()} Iraci Teófilo – Sociedade Individual de Advocacia. Todos os direitos reservados.
             </p>
-            <p className="text-[10px]">
+            <p className="text-[10px] text-white/60">
               Atendimento em conformidade integral com o Código de Ética da OAB, Estatuto da Advocacia e LGPD.
             </p>
           </div>
 
           <button
             onClick={scrollToTop}
-            className="p-2.5 rounded-xl bg-[#4A1810] border border-[#C89A3B]/40 hover:bg-[#6C2418] text-[#E5C158] transition-colors flex items-center space-x-1"
+            className="p-2.5 rounded-xl bg-[#32100A] border border-[#C89A3B]/40 hover:bg-[#4A1810] text-[#E5C158] transition-colors flex items-center space-x-1 cursor-pointer"
             title="Voltar ao topo"
           >
             <ArrowUp className="w-4 h-4" />

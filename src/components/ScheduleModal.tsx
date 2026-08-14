@@ -93,32 +93,32 @@ export const ScheduleModal: React.FC<ScheduleModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-md animate-in fade-in duration-200">
-      <div className="bg-white rounded-2xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl border border-[#C89A3B]/40 relative text-left max-h-[92vh] overflow-y-auto">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-in fade-in duration-200">
+      <div className="bg-[#2D0E08] text-white rounded-2xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl border border-[#C89A3B]/40 relative text-left max-h-[92vh] overflow-y-auto">
         
-            {/* Close Button */}
+        {/* Close Button */}
         <button
           onClick={onClose}
           aria-label="Fechar formulário de agendamento"
-          className="absolute top-4 right-4 p-2 text-gray-400 hover:text-[#6C2418] rounded-full hover:bg-gray-100 transition-colors cursor-pointer"
+          className="absolute top-4 right-4 p-2 text-white/60 hover:text-white rounded-full hover:bg-[#32100A] transition-colors cursor-pointer"
         >
           <X className="w-5 h-5" />
         </button>
 
         {/* Modal Header */}
-        <div className="space-y-1.5 pr-8 border-b border-gray-100 pb-4">
+        <div className="space-y-1.5 pr-8 border-b border-[#C89A3B]/20 pb-4">
           <div className="flex items-center space-x-2">
-            <span className="p-1 rounded bg-[#6C2418] text-[#E5C158] inline-flex">
+            <span className="p-1 rounded bg-[#4A1810] text-[#E5C158] inline-flex">
               <Calendar className="w-4 h-4" />
             </span>
-            <span className="text-xs font-bold text-[#C89A3B] uppercase tracking-wider">
+            <span className="text-xs font-bold text-[#E5C158] uppercase tracking-wider">
               Atendimento Personalizado
             </span>
           </div>
-          <h3 className="text-2xl font-serif-display font-bold text-[#32100A]">
+          <h3 className="text-2xl font-serif-display font-bold text-white">
             Agendar Atendimento Jurídico
           </h3>
-          <p className="text-xs text-gray-600">
+          <p className="text-xs text-white/80">
             Dra. Iraci Teófilo Rosa – Sociedade Individual de Advocacia
           </p>
         </div>
@@ -127,47 +127,47 @@ export const ScheduleModal: React.FC<ScheduleModalProps> = ({
           /* Booking Form */
           <form onSubmit={handleSubmit} className="space-y-4 pt-4">
             {errorMessage && (
-              <div className="p-3 rounded-lg bg-rose-50 border border-rose-200 text-rose-700 text-xs flex items-center space-x-2">
-                <AlertCircle className="w-4 h-4 shrink-0" />
+              <div className="p-3 rounded-lg bg-rose-950 border border-rose-800 text-rose-200 text-xs flex items-center space-x-2">
+                <AlertCircle className="w-4 h-4 shrink-0 text-rose-400" />
                 <span>{errorMessage}</span>
               </div>
             )}
 
             {/* Modality Selector */}
             <div>
-              <label className="block text-xs font-bold text-[#32100A] uppercase tracking-wider mb-1.5">
+              <label className="block text-xs font-bold text-white uppercase tracking-wider mb-1.5">
                 Modalidade de Atendimento *
               </label>
               <div className="grid grid-cols-2 gap-3">
                 <button
                   type="button"
                   onClick={() => setFormData({ ...formData, modality: 'presencial' })}
-                  className={`p-3 rounded-xl border text-left flex items-center space-x-2.5 transition-all ${
+                  className={`p-3 rounded-xl border text-left flex items-center space-x-2.5 transition-all cursor-pointer ${
                     formData.modality === 'presencial'
-                      ? 'border-[#6C2418] bg-[#F5F0E8] text-[#6C2418] font-bold shadow-sm'
-                      : 'border-gray-200 text-gray-600 hover:border-gray-300'
+                      ? 'border-[#E5C158] bg-[#4A1810] text-[#E5C158] font-bold shadow-md'
+                      : 'border-[#C89A3B]/30 bg-[#32100A] text-white hover:border-[#C89A3B]/60'
                   }`}
                 >
-                  <MapPin className="w-4 h-4 text-[#C89A3B] shrink-0" />
+                  <MapPin className="w-4 h-4 text-[#E5C158] shrink-0" />
                   <div>
-                    <span className="block text-xs">Presencial em Goiânia</span>
-                    <span className="block text-[10px] text-gray-500 font-normal">Palácio do Comércio - Centro</span>
+                    <span className="block text-xs text-white font-semibold">Presencial em Goiânia</span>
+                    <span className="block text-[10px] text-white/70 font-normal">Palácio do Comércio - Centro</span>
                   </div>
                 </button>
 
                 <button
                   type="button"
                   onClick={() => setFormData({ ...formData, modality: 'online' })}
-                  className={`p-3 rounded-xl border text-left flex items-center space-x-2.5 transition-all ${
+                  className={`p-3 rounded-xl border text-left flex items-center space-x-2.5 transition-all cursor-pointer ${
                     formData.modality === 'online'
-                      ? 'border-[#6C2418] bg-[#F5F0E8] text-[#6C2418] font-bold shadow-sm'
-                      : 'border-gray-200 text-gray-600 hover:border-gray-300'
+                      ? 'border-[#E5C158] bg-[#4A1810] text-[#E5C158] font-bold shadow-md'
+                      : 'border-[#C89A3B]/30 bg-[#32100A] text-white hover:border-[#C89A3B]/60'
                   }`}
                 >
-                  <Video className="w-4 h-4 text-[#C89A3B] shrink-0" />
+                  <Video className="w-4 h-4 text-[#E5C158] shrink-0" />
                   <div>
-                    <span className="block text-xs">Online / Videoconferência</span>
-                    <span className="block text-[10px] text-gray-500 font-normal">Google Meet / WhatsApp Seguro</span>
+                    <span className="block text-xs text-white font-semibold">Online / Videoconferência</span>
+                    <span className="block text-[10px] text-white/70 font-normal">Google Meet / WhatsApp Seguro</span>
                   </div>
                 </button>
               </div>
@@ -176,7 +176,7 @@ export const ScheduleModal: React.FC<ScheduleModalProps> = ({
             {/* Personal Details */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div>
-                <label htmlFor="input-name" className="block text-xs font-bold text-[#32100A] uppercase tracking-wider mb-1">
+                <label htmlFor="input-name" className="block text-xs font-bold text-white uppercase tracking-wider mb-1">
                   Nome Completo *
                 </label>
                 <input
@@ -187,12 +187,12 @@ export const ScheduleModal: React.FC<ScheduleModalProps> = ({
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   placeholder="Ex: Carlos Eduardo"
-                  className="w-full px-3.5 py-2 rounded-xl border border-gray-300 text-sm focus:border-[#6C2418] focus:ring-1 focus:ring-[#6C2418]"
+                  className="w-full px-3.5 py-2 rounded-xl border border-[#C89A3B]/30 bg-[#32100A] text-white placeholder-white/40 text-sm focus:border-[#E5C158] focus:ring-1 focus:ring-[#E5C158] outline-none"
                 />
               </div>
 
               <div>
-                <label htmlFor="input-phone" className="block text-xs font-bold text-[#32100A] uppercase tracking-wider mb-1">
+                <label htmlFor="input-phone" className="block text-xs font-bold text-white uppercase tracking-wider mb-1">
                   WhatsApp / Telefone *
                 </label>
                 <input
@@ -203,14 +203,14 @@ export const ScheduleModal: React.FC<ScheduleModalProps> = ({
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   placeholder="(62) 99999-8888"
-                  className="w-full px-3.5 py-2 rounded-xl border border-gray-300 text-sm focus:border-[#6C2418] focus:ring-1 focus:ring-[#6C2418]"
+                  className="w-full px-3.5 py-2 rounded-xl border border-[#C89A3B]/30 bg-[#32100A] text-white placeholder-white/40 text-sm focus:border-[#E5C158] focus:ring-1 focus:ring-[#E5C158] outline-none"
                 />
               </div>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div>
-                <label htmlFor="input-email" className="block text-xs font-bold text-[#32100A] uppercase tracking-wider mb-1">
+                <label htmlFor="input-email" className="block text-xs font-bold text-white uppercase tracking-wider mb-1">
                   E-mail (Opcional)
                 </label>
                 <input
@@ -219,22 +219,22 @@ export const ScheduleModal: React.FC<ScheduleModalProps> = ({
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   placeholder="seu.email@exemplo.com"
-                  className="w-full px-3.5 py-2 rounded-xl border border-gray-300 text-sm focus:border-[#6C2418] focus:ring-1 focus:ring-[#6C2418]"
+                  className="w-full px-3.5 py-2 rounded-xl border border-[#C89A3B]/30 bg-[#32100A] text-white placeholder-white/40 text-sm focus:border-[#E5C158] focus:ring-1 focus:ring-[#E5C158] outline-none"
                 />
               </div>
 
               <div>
-                <label htmlFor="select-area" className="block text-xs font-bold text-[#32100A] uppercase tracking-wider mb-1">
+                <label htmlFor="select-area" className="block text-xs font-bold text-white uppercase tracking-wider mb-1">
                   Área do Atendimento
                 </label>
                 <select
                   id="select-area"
                   value={formData.area}
                   onChange={(e) => setFormData({ ...formData, area: e.target.value })}
-                  className="w-full px-3.5 py-2 rounded-xl border border-gray-300 text-sm bg-white focus:border-[#6C2418] focus:ring-1 focus:ring-[#6C2418]"
+                  className="w-full px-3.5 py-2 rounded-xl border border-[#C89A3B]/30 bg-[#32100A] text-white text-sm focus:border-[#E5C158] focus:ring-1 focus:ring-[#E5C158] outline-none"
                 >
                   {PRACTICE_AREAS.map((pa) => (
-                    <option key={pa.id} value={pa.title}>
+                    <option key={pa.id} value={pa.title} className="bg-[#32100A] text-white">
                       {pa.title}
                     </option>
                   ))}
@@ -245,7 +245,7 @@ export const ScheduleModal: React.FC<ScheduleModalProps> = ({
             {/* Date & Time Preferences */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div>
-                <label htmlFor="input-date" className="block text-xs font-bold text-[#32100A] uppercase tracking-wider mb-1">
+                <label htmlFor="input-date" className="block text-xs font-bold text-white uppercase tracking-wider mb-1">
                   Data Preferencial
                 </label>
                 <input
@@ -253,30 +253,30 @@ export const ScheduleModal: React.FC<ScheduleModalProps> = ({
                   type="date"
                   value={formData.preferredDate}
                   onChange={(e) => setFormData({ ...formData, preferredDate: e.target.value })}
-                  className="w-full px-3.5 py-2 rounded-xl border border-gray-300 text-sm focus:border-[#6C2418] focus:ring-1 focus:ring-[#6C2418]"
+                  className="w-full px-3.5 py-2 rounded-xl border border-[#C89A3B]/30 bg-[#32100A] text-white text-sm focus:border-[#E5C158] focus:ring-1 focus:ring-[#E5C158] outline-none"
                 />
               </div>
 
               <div>
-                <label htmlFor="select-time" className="block text-xs font-bold text-[#32100A] uppercase tracking-wider mb-1">
+                <label htmlFor="select-time" className="block text-xs font-bold text-white uppercase tracking-wider mb-1">
                   Turno Preferencial
                 </label>
                 <select
                   id="select-time"
                   value={formData.preferredTime}
                   onChange={(e) => setFormData({ ...formData, preferredTime: e.target.value })}
-                  className="w-full px-3.5 py-2 rounded-xl border border-gray-300 text-sm bg-white focus:border-[#6C2418] focus:ring-1 focus:ring-[#6C2418]"
+                  className="w-full px-3.5 py-2 rounded-xl border border-[#C89A3B]/30 bg-[#32100A] text-white text-sm focus:border-[#E5C158] focus:ring-1 focus:ring-[#E5C158] outline-none"
                 >
-                  <option value="Manhã (08h às 12h)">Manhã (08h às 12h)</option>
-                  <option value="Tarde (14h às 18h)">Tarde (14h às 18h)</option>
-                  <option value="Urgente / Primeiro Horário">Urgente / Primeiro Horário Disponível</option>
+                  <option value="Manhã (08h às 12h)" className="bg-[#32100A] text-white">Manhã (08h às 12h)</option>
+                  <option value="Tarde (14h às 18h)" className="bg-[#32100A] text-white">Tarde (14h às 18h)</option>
+                  <option value="Urgente / Primeiro Horário" className="bg-[#32100A] text-white">Urgente / Primeiro Horário Disponível</option>
                 </select>
               </div>
             </div>
 
             {/* Additional Notes */}
             <div>
-              <label htmlFor="input-notes" className="block text-xs font-bold text-[#32100A] uppercase tracking-wider mb-1">
+              <label htmlFor="input-notes" className="block text-xs font-bold text-white uppercase tracking-wider mb-1">
                 Observações do Caso (Opcional)
               </label>
               <textarea
@@ -285,7 +285,7 @@ export const ScheduleModal: React.FC<ScheduleModalProps> = ({
                 onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
                 rows={2}
                 placeholder="Breve comentário ou número de processo se houver..."
-                className="w-full px-3.5 py-2 rounded-xl border border-gray-300 text-sm focus:border-[#6C2418] focus:ring-1 focus:ring-[#6C2418]"
+                className="w-full px-3.5 py-2 rounded-xl border border-[#C89A3B]/30 bg-[#32100A] text-white placeholder-white/40 text-sm focus:border-[#E5C158] focus:ring-1 focus:ring-[#E5C158] outline-none"
               />
             </div>
 
@@ -302,27 +302,27 @@ export const ScheduleModal: React.FC<ScheduleModalProps> = ({
         ) : (
           /* Confirmation Display */
           <div className="space-y-6 pt-4 text-center">
-            <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto border-2 border-emerald-300 shadow-lg">
+            <div className="w-16 h-16 rounded-full bg-emerald-950 text-emerald-400 flex items-center justify-center mx-auto border-2 border-emerald-600 shadow-lg">
               <CheckCircle2 className="w-8 h-8" />
             </div>
 
             <div className="space-y-2">
-              <span className="text-xs font-bold text-[#C89A3B] uppercase tracking-wider block">
+              <span className="text-xs font-bold text-[#E5C158] uppercase tracking-wider block">
                 Pré-Reserva Efetuada com Sucesso
               </span>
-              <h4 className="text-2xl font-serif-display font-bold text-[#32100A]">
+              <h4 className="text-2xl font-serif-display font-bold text-white">
                 Protocolo: {submittedProtocol}
               </h4>
-              <p className="text-xs text-gray-600 max-w-md mx-auto">
-                Recebemos sua solicitação de atendimento para <strong>{formData.name}</strong> na área de <strong>{formData.area}</strong>.
+              <p className="text-xs text-white/80 max-w-md mx-auto">
+                Recebemos sua solicitação de atendimento para <strong className="text-white">{formData.name}</strong> na área de <strong className="text-white">{formData.area}</strong>.
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-[#FAF8F5] border border-[#6C2418]/15 text-left text-xs space-y-1.5 max-w-md mx-auto">
-              <p className="font-bold text-[#6C2418]">Detalhes da Reserva:</p>
-              <p>• <strong>Modalidade:</strong> {formData.modality === 'presencial' ? 'Presencial no Palácio do Comércio (Goiânia)' : 'Online por Videoconferência'}</p>
-              <p>• <strong>WhatsApp:</strong> {formData.phone}</p>
-              <p>• <strong>Previsão:</strong> {formData.preferredDate || 'A combinar'} ({formData.preferredTime})</p>
+            <div className="p-4 rounded-xl bg-[#32100A] border border-[#C89A3B]/30 text-left text-xs space-y-1.5 max-w-md mx-auto text-white/90">
+              <p className="font-bold text-[#E5C158]">Detalhes da Reserva:</p>
+              <p>• <strong className="text-white">Modalidade:</strong> {formData.modality === 'presencial' ? 'Presencial no Palácio do Comércio (Goiânia)' : 'Online por Videoconferência'}</p>
+              <p>• <strong className="text-white">WhatsApp:</strong> {formData.phone}</p>
+              <p>• <strong className="text-white">Previsão:</strong> {formData.preferredDate || 'A combinar'} ({formData.preferredTime})</p>
             </div>
 
             <div className="pt-2 space-y-3">
@@ -336,7 +336,7 @@ export const ScheduleModal: React.FC<ScheduleModalProps> = ({
 
               <button
                 onClick={onClose}
-                className="text-xs text-gray-500 hover:text-gray-700 underline block mx-auto"
+                className="text-xs text-white/60 hover:text-white underline block mx-auto cursor-pointer"
               >
                 Fechar janela
               </button>

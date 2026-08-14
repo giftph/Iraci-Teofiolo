@@ -227,7 +227,7 @@ export const LegalDocumentsSection: React.FC<LegalDocumentsSectionProps> = ({
   };
 
   return (
-    <section id="documentos" className="py-20 bg-[#FAF7F2] relative overflow-hidden border-t border-b border-[#C89A3B]/20">
+    <section id="documentos" className="py-20 bg-[#240C08] text-white relative overflow-hidden border-t border-b border-[#C89A3B]/20 scroll-mt-24">
       {/* Official Print Letterhead Header (visible only when printing) */}
       <div className="print-only-header hidden">
         <h1>Iraci Teófilo - Sociedade Individual de Advocacia</h1>
@@ -260,11 +260,11 @@ export const LegalDocumentsSection: React.FC<LegalDocumentsSectionProps> = ({
             <span>Preparação para Consulta Jurídica</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif-display font-bold text-[#32100A] tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif-display font-bold text-white tracking-tight">
             Documentação Recomendada por Área de Atuação
           </h2>
 
-          <p className="text-base sm:text-lg text-amber-950/80 leading-relaxed font-normal">
+          <p className="text-base sm:text-lg text-white/90 leading-relaxed font-normal">
             A organização prévia dos documentos garante um parecer mais preciso na primeira consulta e agiliza as providências judiciais ou extrajudiciais. Selecione a área da sua demanda abaixo.
           </p>
         </div>
@@ -280,15 +280,15 @@ export const LegalDocumentsSection: React.FC<LegalDocumentsSectionProps> = ({
                 onClick={() => setActiveGroup(group.id)}
                 className={`flex items-center space-x-2.5 px-4 py-3 rounded-xl text-xs sm:text-sm font-semibold transition-all whitespace-nowrap cursor-pointer shrink-0 border ${
                   isActive
-                    ? 'bg-[#4A1810] text-[#E5C158] border-[#C89A3B] shadow-md scale-[1.02]'
-                    : 'bg-white text-[#4A1810] border-[#C89A3B]/20 hover:bg-amber-100/50 hover:border-[#C89A3B]/40'
+                    ? 'bg-[#6C2418] text-[#E5C158] border-[#E5C158] shadow-lg scale-[1.02]'
+                    : 'bg-[#2D0E08] text-white border-[#C89A3B]/30 hover:bg-[#32100A] hover:border-[#C89A3B]/60'
                 }`}
               >
                 <Icon className={`w-4 h-4 ${isActive ? 'text-[#E5C158]' : 'text-[#C89A3B]'}`} />
                 <span>{group.title}</span>
                 {group.badge && (
                   <span className={`text-[10px] px-2 py-0.5 rounded-full font-bold uppercase tracking-wider ${
-                    isActive ? 'bg-[#C89A3B] text-[#32100A]' : 'bg-amber-100 text-[#4A1810]'
+                    isActive ? 'bg-[#C89A3B] text-[#32100A]' : 'bg-[#32100A] text-[#E5C158] border border-[#C89A3B]/30'
                   }`}>
                     {group.badge}
                   </span>
@@ -299,23 +299,23 @@ export const LegalDocumentsSection: React.FC<LegalDocumentsSectionProps> = ({
         </div>
 
         {/* Selected Area Content Box */}
-        <div className="mt-8 bg-white rounded-2xl border border-[#C89A3B]/30 shadow-xl overflow-hidden grid grid-cols-1 lg:grid-cols-12">
+        <div className="mt-8 bg-[#2D0E08] rounded-2xl border border-[#C89A3B]/30 shadow-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-12">
           
           {/* Left Column: Interactive Checklist (8 cols) */}
           <div className="lg:col-span-8 p-6 sm:p-8 space-y-6">
             
             {/* Title & Description Header */}
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-amber-900/10 pb-6">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[#C89A3B]/20 pb-6">
               <div>
                 <div className="flex items-center space-x-3">
                   <div className="p-2.5 rounded-xl bg-[#4A1810] text-[#E5C158] border border-[#C89A3B]/40">
                     <currentGroup.icon className="w-6 h-6 text-[#E5C158]" />
                   </div>
                   <div>
-                    <h3 className="text-xl sm:text-2xl font-serif-display font-bold text-[#32100A]">
+                    <h3 className="text-xl sm:text-2xl font-serif-display font-bold text-white">
                       {currentGroup.title}
                     </h3>
-                    <p className="text-xs sm:text-sm text-amber-900/70 mt-0.5">
+                    <p className="text-xs sm:text-sm text-white/80 mt-0.5">
                       {currentGroup.description}
                     </p>
                   </div>
@@ -323,15 +323,15 @@ export const LegalDocumentsSection: React.FC<LegalDocumentsSectionProps> = ({
               </div>
 
               {/* Progress badge */}
-              <div className="inline-flex items-center space-x-2 px-3.5 py-2 rounded-xl bg-amber-50 border border-[#C89A3B]/30 text-xs font-bold text-[#4A1810] shrink-0 self-start sm:self-auto">
+              <div className="inline-flex items-center space-x-2 px-3.5 py-2 rounded-xl bg-[#32100A] border border-[#C89A3B]/40 text-xs font-bold text-white shrink-0 self-start sm:self-auto">
                 <span>Completado:</span>
-                <span className="text-[#9E7422] font-black text-sm">{checkedInGroup}/{totalInGroup}</span>
+                <span className="text-[#E5C158] font-black text-sm">{checkedInGroup}/{totalInGroup}</span>
               </div>
             </div>
 
             {/* Checklist Items */}
             <div className="space-y-3">
-              <p className="text-xs font-bold text-amber-900/60 uppercase tracking-wider">
+              <p className="text-xs font-bold text-white/70 uppercase tracking-wider">
                 Marque os documentos que você já tem em mãos:
               </p>
 
@@ -344,46 +344,46 @@ export const LegalDocumentsSection: React.FC<LegalDocumentsSectionProps> = ({
                       onClick={() => toggleDoc(doc.id)}
                       className={`p-4 rounded-xl border transition-all cursor-pointer select-none flex items-start space-x-3.5 group print-card ${
                         isChecked
-                          ? 'bg-amber-50/80 border-[#C89A3B] shadow-sm'
-                          : 'bg-[#FAF7F2]/60 border-amber-900/10 hover:border-[#C89A3B]/40 hover:bg-amber-100/30'
+                          ? 'bg-[#32100A] border-[#E5C158] shadow-sm'
+                          : 'bg-[#240C08] border-[#C89A3B]/20 hover:border-[#C89A3B]/50 hover:bg-[#32100A]/50'
                       }`}
                     >
                       <button 
                         type="button" 
-                        className="mt-0.5 text-[#C89A3B] group-hover:scale-110 transition-transform cursor-pointer"
+                        className="mt-0.5 text-[#E5C158] group-hover:scale-110 transition-transform cursor-pointer"
                         aria-label={isChecked ? "Desmarcar documento" : "Marcar documento"}
                       >
                         {isChecked ? (
-                          <CheckSquare className="w-5 h-5 text-[#9E7422] fill-[#9E7422]/10" />
+                          <CheckSquare className="w-5 h-5 text-[#E5C158] fill-[#E5C158]/20" />
                         ) : (
-                          <Square className="w-5 h-5 text-amber-900/30 group-hover:text-[#C89A3B]" />
+                          <Square className="w-5 h-5 text-white/40 group-hover:text-[#E5C158]" />
                         )}
                       </button>
 
                       <div className="flex-1 space-y-1">
                         <div className="flex flex-wrap items-center justify-between gap-2">
                           <span className={`text-sm sm:text-base font-semibold leading-snug ${
-                            isChecked ? 'text-[#32100A] line-through decoration-[#9E7422]/50' : 'text-[#4A1810]'
+                            isChecked ? 'text-white/70 line-through decoration-[#E5C158]' : 'text-white'
                           }`}>
                             {doc.name}
                           </span>
                           <span className={`text-[10px] px-2 py-0.5 rounded-md font-bold uppercase ${
                             doc.category === 'essential' 
-                              ? 'bg-red-100 text-red-900 border border-red-200' 
-                              : 'bg-amber-100 text-amber-900 border border-amber-200'
+                              ? 'bg-red-950 text-red-300 border border-red-800' 
+                              : 'bg-[#4A1810] text-[#E5C158] border border-[#C89A3B]/40'
                           }`}>
                             {doc.category === 'essential' ? 'Essencial' : 'Específico'}
                           </span>
                         </div>
 
-                        <p className="text-xs text-amber-950/70 leading-relaxed">
+                        <p className="text-xs text-white/80 leading-relaxed">
                           {doc.description}
                         </p>
 
                         {doc.tip && (
-                          <div className="inline-flex items-center space-x-1.5 text-[11px] text-[#9E7422] bg-amber-100/60 px-2.5 py-1 rounded-md font-medium mt-1">
-                            <Info className="w-3.5 h-3.5 text-[#9E7422] shrink-0" />
-                            <span><strong>Orientação:</strong> {doc.tip}</span>
+                          <div className="inline-flex items-center space-x-1.5 text-[11px] text-[#E5C158] bg-[#32100A] px-2.5 py-1 rounded-md font-medium mt-1 border border-[#C89A3B]/30">
+                            <Info className="w-3.5 h-3.5 text-[#E5C158] shrink-0" />
+                            <span><strong className="text-white">Orientação:</strong> {doc.tip}</span>
                           </div>
                         )}
                       </div>
@@ -394,7 +394,7 @@ export const LegalDocumentsSection: React.FC<LegalDocumentsSectionProps> = ({
             </div>
 
             {/* Checklist Action Bar */}
-            <div className="pt-4 border-t border-amber-900/10 flex flex-wrap items-center justify-between gap-3 no-print">
+            <div className="pt-4 border-t border-[#C89A3B]/20 flex flex-wrap items-center justify-between gap-3 no-print">
               <div className="flex flex-wrap items-center gap-2">
                 <button
                   onClick={handlePrint}
@@ -409,19 +409,19 @@ export const LegalDocumentsSection: React.FC<LegalDocumentsSectionProps> = ({
                 <button
                   onClick={handleCopyChecklist}
                   aria-label="Copiar checklist de documentos para a área de transferência"
-                  className="inline-flex items-center space-x-2 px-4 py-2.5 rounded-xl text-xs font-semibold text-[#4A1810] bg-amber-100/70 hover:bg-amber-200/80 border border-[#C89A3B]/40 transition-all cursor-pointer"
+                  className="inline-flex items-center space-x-2 px-4 py-2.5 rounded-xl text-xs font-semibold text-white bg-[#32100A] hover:bg-[#4A1810] border border-[#C89A3B]/40 transition-all cursor-pointer"
                 >
-                  {copiedToast ? <Check className="w-4 h-4 text-emerald-600" /> : <Copy className="w-4 h-4 text-[#C89A3B]" />}
+                  {copiedToast ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4 text-[#E5C158]" />}
                   <span>{copiedToast ? 'Copiado!' : 'Copiar Checklist'}</span>
                 </button>
 
                 <button
                   onClick={handleDownloadTxt}
                   aria-label="Baixar checklist de documentos em formato TXT"
-                  className="inline-flex items-center space-x-2 px-4 py-2.5 rounded-xl text-xs font-semibold text-[#4A1810] bg-amber-100/70 hover:bg-amber-200/80 border border-[#C89A3B]/40 transition-all cursor-pointer"
+                  className="inline-flex items-center space-x-2 px-4 py-2.5 rounded-xl text-xs font-semibold text-white bg-[#32100A] hover:bg-[#4A1810] border border-[#C89A3B]/40 transition-all cursor-pointer"
                   title="Baixar lista em arquivo de texto formatado"
                 >
-                  <Download className="w-4 h-4 text-[#C89A3B]" />
+                  <Download className="w-4 h-4 text-[#E5C158]" />
                   <span>Baixar TXT</span>
                 </button>
               </div>
@@ -447,18 +447,18 @@ export const LegalDocumentsSection: React.FC<LegalDocumentsSectionProps> = ({
                 <h4>Dicas da Dra. Iraci Teófilo</h4>
               </div>
 
-              <ul className="space-y-4 text-xs sm:text-sm text-amber-100/90 leading-relaxed">
+              <ul className="space-y-4 text-xs sm:text-sm text-white/90 leading-relaxed">
                 <li className="flex items-start space-x-2.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#E5C158] mt-2 shrink-0"></span>
-                  <span><strong>Formatos aceitos:</strong> Aceitamos documentos originais impressos no escritório ou arquivos digitais em PDF legíveis.</span>
+                  <span><strong className="text-white">Formatos aceitos:</strong> Aceitamos documentos originais impressos no escritório ou arquivos digitais em PDF legíveis.</span>
                 </li>
                 <li className="flex items-start space-x-2.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#E5C158] mt-2 shrink-0"></span>
-                  <span><strong>Prints de WhatsApp:</strong> Em conversas digitais, certifique-se de capturar o número de telefone completo com código de área e data visíveis.</span>
+                  <span><strong className="text-white">Prints de WhatsApp:</strong> Em conversas digitais, certifique-se de capturar o número de telefone completo com código de área e data visíveis.</span>
                 </li>
                 <li className="flex items-start space-x-2.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#E5C158] mt-2 shrink-0"></span>
-                  <span><strong>Falta algum documento?</strong> Não se preocupe. Na primeira consulta avaliamos alternativas legais e podemos requerer a exibição de documentos em juízo se necessário.</span>
+                  <span><strong className="text-white">Falta algum documento?</strong> Não se preocupe. Na primeira consulta avaliamos alternativas legais e podemos requerer a exibição de documentos em juízo se necessário.</span>
                 </li>
               </ul>
 
@@ -467,7 +467,7 @@ export const LegalDocumentsSection: React.FC<LegalDocumentsSectionProps> = ({
                   <ShieldCheck className="w-4 h-4 text-[#E5C158]" />
                   <span>Sigilo Profissional Absoluto</span>
                 </p>
-                <p className="text-amber-200/80 leading-normal">
+                <p className="text-white/80 leading-normal">
                   Todos os documentos e informações fornecidos estão resguardados pelo sigilo profissional da advocacia (Lei 8.906/94) e pela LGPD.
                 </p>
               </div>
@@ -475,7 +475,7 @@ export const LegalDocumentsSection: React.FC<LegalDocumentsSectionProps> = ({
 
             {/* Schedule CTA Box */}
             <div className="pt-4 border-t border-[#C89A3B]/30 space-y-3">
-              <p className="text-xs text-amber-200/90">
+              <p className="text-xs text-white/90">
                 Pronto para agendar o seu atendimento em Goiânia ou por videoconferência?
               </p>
               <button

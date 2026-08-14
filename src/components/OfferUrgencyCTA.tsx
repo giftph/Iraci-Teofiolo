@@ -36,7 +36,7 @@ export const OfferUrgencyCTA: React.FC<OfferUrgencyCTAProps> = ({ onOpenSchedule
             Sua Causa Merece o Comando Direto de Quem É <span className="gold-gradient-text italic font-normal">Referência em Goiás</span>
           </h2>
 
-          <p className="text-base sm:text-lg text-amber-100/90 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-white/90 leading-relaxed max-w-2xl mx-auto">
             Para assegurar a máxima profundidade técnica e acompanhamento rigoroso, a <strong className="text-white font-semibold">Dra. Iraci Teófilo Rosa</strong> limita o número de novas análises semanais. Garanta seu atendimento prioritário hoje.
           </p>
 
@@ -52,7 +52,7 @@ export const OfferUrgencyCTA: React.FC<OfferUrgencyCTAProps> = ({ onOpenSchedule
                 <CheckCircle2 className="w-5 h-5 text-[#E5C158] shrink-0 mt-0.5" />
                 <div>
                   <h4 className="text-sm font-bold text-white">Análise Pessoal do Caso</h4>
-                  <p className="text-xs text-amber-100/70">Exame detalhado dos fatos e documentos pela própria Dra. Iraci Teófilo.</p>
+                  <p className="text-xs text-white/80">Exame detalhado dos fatos e documentos pela própria Dra. Iraci Teófilo.</p>
                 </div>
               </div>
 
@@ -60,7 +60,7 @@ export const OfferUrgencyCTA: React.FC<OfferUrgencyCTAProps> = ({ onOpenSchedule
                 <CheckCircle2 className="w-5 h-5 text-[#E5C158] shrink-0 mt-0.5" />
                 <div>
                   <h4 className="text-sm font-bold text-white">Diagnóstico de Riscos & Oportunidades</h4>
-                  <p className="text-xs text-amber-100/70">Mapeamento da jurisprudência atual do TJGO, STJ e STF aplicável ao seu caso.</p>
+                  <p className="text-xs text-white/80">Mapeamento da jurisprudência atual do TJGO, STJ e STF aplicável ao seu caso.</p>
                 </div>
               </div>
 
@@ -68,7 +68,7 @@ export const OfferUrgencyCTA: React.FC<OfferUrgencyCTAProps> = ({ onOpenSchedule
                 <CheckCircle2 className="w-5 h-5 text-[#E5C158] shrink-0 mt-0.5" />
                 <div>
                   <h4 className="text-sm font-bold text-white">Plano de Ação Personalizado</h4>
-                  <p className="text-xs text-amber-100/70">Estratégia clara de atuação (via extrajudicial rápida ou contencioso judicial).</p>
+                  <p className="text-xs text-white/80">Estratégia clara de atuação (via extrajudicial rápida ou contencioso judicial).</p>
                 </div>
               </div>
 
@@ -76,13 +76,13 @@ export const OfferUrgencyCTA: React.FC<OfferUrgencyCTAProps> = ({ onOpenSchedule
                 <CheckCircle2 className="w-5 h-5 text-[#E5C158] shrink-0 mt-0.5" />
                 <div>
                   <h4 className="text-sm font-bold text-white">Transparência de Honorários</h4>
-                  <p className="text-xs text-amber-100/70">Proposta clara em total conformidade com a Tabela da OAB/GO, sem custos ocultos.</p>
+                  <p className="text-xs text-white/80">Proposta clara em total conformidade com a Tabela da OAB/GO, sem custos ocultos.</p>
                 </div>
               </div>
             </div>
 
             {/* Friction Reducers Bar */}
-            <div className="pt-4 border-t border-[#C89A3B]/20 flex flex-wrap items-center justify-between gap-4 text-xs text-amber-200/80">
+            <div className="pt-4 border-t border-[#C89A3B]/20 flex flex-wrap items-center justify-between gap-4 text-xs text-white/80">
               <span className="flex items-center space-x-1.5">
                 <Lock className="w-4 h-4 text-[#E5C158]" />
                 <span>Sigilo Profissional Absoluto Regido pelo Estatuto da OAB</span>

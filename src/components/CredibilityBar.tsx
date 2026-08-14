@@ -50,7 +50,7 @@ export const CredibilityBar: React.FC = () => {
                   <span className="block text-xs font-semibold text-[#E5C158] uppercase tracking-wider">
                     {item.label}
                   </span>
-                  <span className="block text-[11px] text-amber-200/70">
+                  <span className="block text-[11px] text-white/80">
                     {item.sublabel}
                   </span>
                 </div>

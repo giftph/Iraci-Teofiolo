@@ -34,21 +34,21 @@ export const ProblemAgitation: React.FC<ProblemAgitationProps> = ({ onOpenSchedu
   ];
 
   return (
-    <section className="py-20 bg-[#FAF7F2] dark:bg-[#200A06] relative overflow-hidden transition-colors border-b border-amber-900/10">
+    <section className="py-20 bg-[#200A06] text-white relative overflow-hidden transition-colors border-b border-[#C89A3B]/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* CRO Headline: Framing the agitation */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-          <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full text-xs font-bold bg-rose-100 dark:bg-rose-950/80 text-rose-800 dark:text-rose-300 border border-rose-300 dark:border-rose-800 shadow-sm">
-            <AlertTriangle className="w-4 h-4 text-rose-600 dark:text-rose-400" />
+          <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full text-xs font-bold bg-rose-950/80 text-rose-200 border border-rose-700/60 shadow-sm">
+            <AlertTriangle className="w-4 h-4 text-rose-400" />
             <span className="uppercase tracking-wider">Identificou Algum Desses Problemas?</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif-display font-bold text-[#32100A] dark:text-white leading-tight">
-            Não Deixe Seus Direitos nas Mãos do Acaso ou da <span className="text-[#6C2418] dark:text-[#E5C158] italic font-normal">Demora Burocrática</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif-display font-bold text-white leading-tight">
+            Não Deixe Seus Direitos nas Mãos do Acaso ou da <span className="text-[#E5C158] italic font-normal">Demora Burocrática</span>
           </h2>
 
-          <p className="text-base sm:text-lg text-gray-700 dark:text-amber-100/80 leading-relaxed">
+          <p className="text-base sm:text-lg text-white/90 leading-relaxed">
             No Direito, o tempo corre contra você. Um prazo perdido ou uma tese jurídica fraca podem custar anos de esforço e o patrimônio de toda uma vida.
           </p>
         </div>
@@ -60,21 +60,21 @@ export const ProblemAgitation: React.FC<ProblemAgitationProps> = ({ onOpenSchedu
             return (
               <div
                 key={idx}
-                className="p-8 rounded-2xl bg-white dark:bg-[#2D0E08] border border-rose-200/80 dark:border-rose-900/40 shadow-xl hover:shadow-2xl transition-all relative overflow-hidden group text-left"
+                className="p-8 rounded-2xl bg-[#2D0E08] border border-rose-900/40 text-white shadow-xl hover:shadow-2xl transition-all relative overflow-hidden group text-left"
               >
-                <div className="w-14 h-14 rounded-2xl bg-rose-50 dark:bg-rose-950/50 border border-rose-200 dark:border-rose-900 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <IconComp className="w-7 h-7 text-rose-700 dark:text-rose-400" />
+                <div className="w-14 h-14 rounded-2xl bg-rose-950/60 border border-rose-800/60 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <IconComp className="w-7 h-7 text-rose-400" />
                 </div>
 
-                <h3 className="text-xl font-serif-display font-bold text-[#32100A] dark:text-white mb-3">
+                <h3 className="text-xl font-serif-display font-bold text-white mb-3">
                   {point.title}
                 </h3>
 
-                <p className="text-sm text-gray-600 dark:text-amber-100/70 leading-relaxed">
+                <p className="text-sm text-white/80 leading-relaxed">
                   {point.description}
                 </p>
 
-                <div className="mt-6 pt-4 border-t border-rose-100 dark:border-rose-900/30 flex items-center text-xs font-semibold text-rose-700 dark:text-rose-300">
+                <div className="mt-6 pt-4 border-t border-rose-900/40 flex items-center text-xs font-semibold text-rose-300">
                   <span>Alto risco de prejuízo sem intervenção</span>
                 </div>
               </div>
@@ -96,12 +96,12 @@ export const ProblemAgitation: React.FC<ProblemAgitationProps> = ({ onOpenSchedu
                 Recupere a Tranquilidade com Quem Tem <span className="gold-gradient-text italic font-normal">30+ Anos de Autoridade Inabalável</span>
               </h3>
 
-              <p className="text-sm sm:text-base text-amber-100/90 leading-relaxed max-w-2xl">
+              <p className="text-sm sm:text-base text-white/90 leading-relaxed max-w-2xl">
                 Diferente de grandes bancas impessoais, na <strong className="text-white font-semibold">Sociedade Individual de Advocacia Dra. Iraci Teófilo Rosa</strong>, o seu caso é analisado e conduzido pessoalmente por advogada titular e Ouvidora-Geral da OAB/GO.
               </p>
 
               {/* Frictionless Trust Badges */}
-              <div className="pt-2 flex flex-wrap gap-4 text-xs font-semibold text-amber-200/90">
+              <div className="pt-2 flex flex-wrap gap-4 text-xs font-semibold text-white/90">
                 <span className="flex items-center space-x-1.5">
                   <CheckCircle2 className="w-4 h-4 text-[#E5C158]" />
                   <span>Diagnóstico Estratégico em 24h</span>
@@ -128,7 +128,7 @@ export const ProblemAgitation: React.FC<ProblemAgitationProps> = ({ onOpenSchedu
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
 
-              <span className="text-[11px] text-amber-200/70 font-medium">
+              <span className="text-[11px] text-amber-200/80 font-medium">
                 ⚡ Atendimento Direto via WhatsApp
               </span>
             </div>

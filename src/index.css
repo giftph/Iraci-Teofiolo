@@ -22,8 +22,8 @@
 
   body {
     font-family: var(--font-inter);
-    background-color: var(--color-linen);
-    color: #2D2725;
+    background-color: #240C08;
+    color: #FFFFFF;
     overflow-x: hidden;
     scroll-behavior: smooth;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -31,6 +31,11 @@
 
   h1, h2, h3, h4, .font-serif-display {
     font-family: var(--font-playfair);
+    color: #FFFFFF;
+  }
+
+  p, span, li, label, div {
+    color: inherit;
   }
 
   .font-brand-seal {

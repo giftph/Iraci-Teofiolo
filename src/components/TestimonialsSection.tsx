@@ -47,7 +47,7 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({ onOpen
   ];
 
   return (
-    <section id="depoimentos" className="py-24 bg-[#FAF8F5] dark:bg-[#240C08] relative overflow-hidden transition-colors border-b border-amber-900/10">
+    <section id="depoimentos" className="py-24 bg-[#200A06] text-white relative overflow-hidden transition-colors border-b border-[#C89A3B]/20 scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
@@ -57,22 +57,22 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({ onOpen
             <span className="uppercase tracking-wider">Histórias Reais de Êxito</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif-display font-bold text-[#32100A] dark:text-white leading-tight">
-            A Confiança de Quem Teve Seus Direitos <span className="text-[#6C2418] dark:text-[#E5C158] italic font-normal">Restabelecidos</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif-display font-bold text-white leading-tight">
+            A Confiança de Quem Teve Seus Direitos <span className="text-[#E5C158] italic font-normal">Restabelecidos</span>
           </h2>
 
-          <p className="text-base sm:text-lg text-gray-700 dark:text-amber-100/80 leading-relaxed">
+          <p className="text-base sm:text-lg text-white/90 leading-relaxed">
             Mais de 3.000 clientes e famílias em Goiás e em todo o Brasil confiaram suas causas mais delicadas ao comando da Dra. Iraci Teófilo Rosa.
           </p>
 
           {/* Aggregate Rating Banner */}
-          <div className="pt-2 flex items-center justify-center space-x-3 text-sm font-bold text-[#32100A] dark:text-amber-200">
-            <div className="flex text-amber-500">
+          <div className="pt-2 flex items-center justify-center space-x-3 text-sm font-bold text-white">
+            <div className="flex text-amber-400">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-500" />
+                <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-400" />
               ))}
             </div>
-            <span>4.9 / 5.0 estrelas • 99.4% de Satisfação</span>
+            <span className="text-[#E5C158]">4.9 / 5.0 estrelas • 99.4% de Satisfação</span>
           </div>
         </div>
 
@@ -81,10 +81,10 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({ onOpen
           {testimonials.map((item) => (
             <div
               key={item.id}
-              className="p-8 rounded-2xl bg-white dark:bg-[#2D0E08] border border-[#C89A3B]/30 shadow-xl hover:shadow-2xl transition-all relative flex flex-col justify-between text-left group"
+              className="p-8 rounded-2xl bg-[#2D0E08] border border-[#C89A3B]/30 text-white shadow-xl hover:shadow-2xl transition-all relative flex flex-col justify-between text-left group"
             >
               {/* Quote Icon Background */}
-              <Quote className="absolute top-6 right-6 w-10 h-10 text-amber-200/40 dark:text-amber-900/30 group-hover:scale-110 transition-transform" />
+              <Quote className="absolute top-6 right-6 w-10 h-10 text-amber-500/10 group-hover:scale-110 transition-transform" />
 
               <div className="space-y-4 relative z-10">
                 {/* Rating Stars */}
@@ -95,35 +95,35 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({ onOpen
                 </div>
 
                 {/* Case Type Badge */}
-                <span className="inline-block px-3 py-1 rounded-md text-[11px] font-bold uppercase tracking-wider bg-amber-50 dark:bg-[#4A1810] text-[#6C2418] dark:text-[#E5C158] border border-[#C89A3B]/30">
+                <span className="inline-block px-3 py-1 rounded-md text-[11px] font-bold uppercase tracking-wider bg-[#4A1810] text-[#E5C158] border border-[#C89A3B]/40">
                   {item.caseType}
                 </span>
 
                 {/* Testimonial Text */}
-                <p className="text-sm text-gray-700 dark:text-amber-100/90 leading-relaxed italic">
+                <p className="text-sm text-white/90 leading-relaxed italic">
                   "{item.quote}"
                 </p>
               </div>
 
               {/* Client Info & Outcome */}
-              <div className="mt-6 pt-4 border-t border-gray-100 dark:border-amber-900/30 space-y-2 relative z-10">
+              <div className="mt-6 pt-4 border-t border-[#C89A3B]/20 space-y-2 relative z-10">
                 <div className="flex items-center justify-between">
                   <div>
-                    <h4 className="text-sm font-bold text-[#32100A] dark:text-white">
+                    <h4 className="text-sm font-bold text-white">
                       {item.name}
                     </h4>
-                    <p className="text-xs text-gray-500 dark:text-amber-200/60">
+                    <p className="text-xs text-white/70">
                       {item.role} • {item.location}
                     </p>
                   </div>
-                  <span className="inline-flex items-center text-[10px] font-semibold text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-300 dark:border-emerald-800">
-                    <CheckCircle2 className="w-3 h-3 mr-1" />
+                  <span className="inline-flex items-center text-[10px] font-semibold text-emerald-300 bg-emerald-950/80 px-2.5 py-1 rounded border border-emerald-500/40">
+                    <CheckCircle2 className="w-3 h-3 mr-1 text-emerald-400" />
                     Cliente Verificado
                   </span>
                 </div>
 
-                <div className="text-[11px] font-semibold text-[#6C2418] dark:text-[#E5C158]">
-                  Resultados: <span className="font-normal text-gray-600 dark:text-amber-100/70">{item.outcome}</span>
+                <div className="text-[11px] font-semibold text-[#E5C158]">
+                  Resultados: <span className="font-normal text-white/80">{item.outcome}</span>
                 </div>
               </div>
             </div>
@@ -135,7 +135,7 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({ onOpen
           <h3 className="text-2xl font-serif-display font-bold text-white">
             Quer Saber Se Seu Caso Possui Grande Viabilidade Jurídica?
           </h3>
-          <p className="text-sm text-amber-100/80 max-w-2xl mx-auto">
+          <p className="text-sm text-white/90 max-w-2xl mx-auto">
             Não tome decisões sem antes consultar uma especialista. Fale diretamente com nossa equipe no WhatsApp e receba orientações iniciais sem burocracia.
           </p>
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
